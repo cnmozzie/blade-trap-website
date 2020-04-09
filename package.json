@@ -1,0 +1,29 @@
+{
+  "name": "blade-trap-website",
+  "version": "1.0.0",
+  "description": "a simple website supported by vue ",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnmozzie/blade-trap-website.git"
+  },
+  "author": "mozzie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cnmozzie/blade-trap-website/issues"
+  },
+  "homepage": "https://github.com/cnmozzie/blade-trap-website#readme",
+  "devDependencies": {
+    "bootstrap": "^4.4.1",
+    "css-loader": "^3.5.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
