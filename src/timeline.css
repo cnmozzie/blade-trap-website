@@ -1,34 +1,5 @@
 @charset "UTF-8";
 
-body {
-  height: inherit;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Fira Sans', sans-serif;
-  color: #79838c;
-}
-
-a {
-  color: #50585f;
-  text-decoration: none;
-}
-a:hover {
-  color: #383e44;
-}
-
-header:after {
-  content: '';
-  position: absolute;
-  bottom: -5rem;
-  left: 0rem;
-  height: 5.1rem;
-  display: block;
-  width: 100%;
-  z-index: 300;
-  background: linear-gradient(to bottom, white 20%, rgba(255, 255, 255, 0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
 #timeline {
   position: relative;
   display: table;
@@ -36,6 +7,8 @@ header:after {
   margin-left: auto;
   margin-right: auto;
   margin-top: 8rem;
+  font-family: 'Fira Sans', sans-serif;
+  color: #79838c;
 }
 #timeline div:after {
   content: '';

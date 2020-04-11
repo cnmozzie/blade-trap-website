@@ -1,0 +1,19 @@
+a {
+  color: #50585f;
+  text-decoration: none;
+}
+a:hover {
+  color: #383e44;
+}
+
+div.container {
+  position: relative;
+  margin-top: 5rem;
+}
+
+.anchor{
+  display: block;
+  height: 60px; /*和顶部fix的高度一致*/
+  margin-top: -60px; /*和顶部fix的高度一致*/
+  visibility: hidden;
+}

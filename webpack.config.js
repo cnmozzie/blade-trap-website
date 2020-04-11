@@ -1,4 +1,5 @@
 const path = require('path');
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   mode: 'development',
@@ -10,15 +11,34 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-   module: {
+  resolve: {
+      alias: {
+          'vue$': 'vue/dist/vue.esm.js'
+      }
+  },
+  module: {
      rules: [
+	   {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+       },
        {
          test: /\.css$/,
          use: [
            'style-loader',
            'css-loader'
          ]
+       },
+	   {
+          test: /\.(png|svg|jpg|gif)$/,
+          use: [
+            'file-loader'
+          ]
        }
      ]
-   }
+   },
+  plugins: [
+    // 请确保引入这个插件来施展魔法
+    new VueLoaderPlugin()
+  ]
 };
