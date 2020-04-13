@@ -4,6 +4,7 @@
 	  <div class="fixed-top d-none d-xl-block col-xl-2 bd-toc">
 			<br><br><br><br>
             <ul class="section-nav">
+			    <li class="toc-entry toc-h2"><a href="#overview">Overview</a>
 				<li class="toc-entry toc-h2"><a href="#air-bake-out">Air Bake-out</a>
 					<ul>
 						<li class="toc-entry toc-h3"><a href="#prebake">Prebake</a></li>
@@ -31,12 +32,22 @@
 			</ul>
       </div>
 	  <main class="offset-xs-0 offset-xl-2 col-sm-12 col-xs-12 col-xl-10 py-md-3 pl-md-5 bd-content" role="main">
+	    <h1 class="bd-title" id="content">Chamber</h1>
+        <p class="bd-lead">Make a clear room for ions.</p>
+		<div class="anchor" id="overview"></div>
+        <h4><span style="color:#800000;font-family:comic sans ms,cursive;">Overview</span></h4>
+		<p>The blade trap is more like a handicraft. There's no a standar way to make it.
+		   We use <a href="Blade-trap-assembly-and-vacuum-system.pdf">《装腔宝典》</a>（国际知名专家Jarry Ma倾情撰写） as our primary reference here.</p>
+
+		<p>Make sure you have plenties of money to prepare the necessary parts and devices before you start to go. 
+		  Click <a href="chamber.html">here</a> to look at the parts list for assembling the chamber!</p>
+
 	    <div class="anchor" id="air-bake-out"></div>
         <h4><span style="color:#800000;font-family:comic sans ms,cursive;">Air Bake-out</span></h4>
 
 	    <p>To achieve a high vacuum condition , it is critical that materials are free of gasses, water vapor, and other contaminants. 
 	       A vacuum bake-out is a process used to remove such contaminants. You may like to search it online to learn more.</p>
-		
+
 		<div class="anchor" id="prebake"></div>
 		<h5>Prebake</h5>
 	    <p>Some components of the chamber can be baked-out in the air. Reducing flange, octagon vacuum chamber, conical reducer nipples and 5-way cross are baked before assembling.</p>
@@ -44,14 +55,20 @@
 	       The first phase is set to 200℃ while others are set to 300℃.</p>
 	    <p>Then we need to cool down the oven to room temperature to get back our chamber. Cooling is divided to four phases and each lasts 1080 minutes. 
 	       The first phase is set to 40℃ while others are set to 20℃. When the temperature is near 80~90℃, we can open the oven door slightly to speed up the cooling process.</p>
-	    <figure class="figure">
-		  <img src="air_bake-out/inside-oven.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 1:</strong> The chamber components are wrapped with foil. We've put some bricks around it to make it more like baking!</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="air_bake-out/outside-oven.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 2:</strong> Our hot oven</figcaption>
-		</figure>
+	    <div class="row" v-lazy-container="{ selector: 'img' }" v-viewer>
+          <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="air_bake-out/inside-oven.jpg" data-loading="air_bake-out/inside-oven_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 1:</strong> The chamber components are wrapped with foil. We've put some bricks around it to make it more like baking!</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="air_bake-out/outside-oven.jpg" data-loading="air_bake-out/outside-oven_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 2:</strong> Our hot oven</figcaption>
+	    	</figure>
+ 	      </div>
+	    </div>
 		
 		<div class="anchor" id="bake-chamber"></div>
 		<h5 id="bake-chamber">Bake the Vaccum Chamber</h5>
@@ -66,38 +83,67 @@
 		   The NEG pump should keep in conditioning mode (250℃ by default) during bake-out process too.
 	       At the same time, start mechanical pump, wait until it to be stable, then start molecular pump. 
 		   When the chamber reaches a reasonable vacuum condition (E-8 Torr magnitude), you can start the getter-ion pump.
-		   As a rule of thumb, you can start ion pump when the oven reaches 145℃, as fig 3 does.</p>
+		   As a rule of thumb, you can start ion pump when the oven reaches 145℃, as <a href="#fig3">Fig 3</a> does.</p>
 		<p>With the contaminants slowly pumping out, the pressure should gradually reach the pump's limit (about 1~3 E-9 Torr).
 		   It's time to activate the NEG pump. Since we will open the oven and close the angle valve the time the activation is finished, 
 		   we will cool the oven temperature to 100℃ first, in case the oven temperature change too rapidly.
-		   (We forgot do it during the first activation in fig 3, thus we stop the activation and do it again after cooling down to 100℃.)
+		   (We forgot do it during the first activation in <a href="#fig3">Fig 3</a>, thus we stop the activation and do it again after cooling down to 100℃.)
 	       You can consider to perform degassing for ytterbium oven  when waiting for the hot oven cooling down. 
 		   When activation finished, close the angle valve and start StarCell ION pump.
 		   Stop the NEG pump and wait the oven cooling to room temperature. The chamber pressure should reach E-11 Torr region thus finishes the baking process.</p>
 		<p>The pressure was slowly growing up from 3.4E-11 Torr to 2.2E-10 Torr after we taking out the chamber from the oven. 
 	       Fortunately, after about a week, the pressure went back to 1.3E-10 Torr and became stable, which is an acceptable vacuum condition.</p>
-		
-		<figure class="figure">
-		  <embed src="air_bake-out/stage1.svg" width="1040" height="400">
-		  <figcaption class="figure-caption"><strong>Fig 3:</strong> The first try of air bake-out. 
-		  After start the ion pump, the pressure dropped slowly in the first day, and seemed not changed in the next few days.
-		  Typcally, the ion pump pressure can reach E-9 Torr region. Thus we decide to start cooling in advance.
-		  After the activation, the NEG current is finally stuck in 850nA, which is far from satisfied.</figcaption>
-		</figure>
-		
-		<figure class="figure">
-		  <embed src="air_bake-out/stage2.svg" width="1040" height="400">
-		  <figcaption class="figure-caption"><strong>Fig 4:</strong> After tighting some bolts, we start the second try of air bake-out.
-		  Although we had a better start than before, but the ion pump pressure is still stuck at 2E-8 Torr.
-		  After a few days I realised I made a mistake before that I forget to clean the angle valve before assembling the chamber.
-		  Therefore we stop this bake-out and change the angle valve to a clean one.</figcaption>
-		</figure>
-		
-		<figure class="figure">
-		  <embed src="air_bake-out/stage3.svg" width="1040" height="400">
-		  <figcaption class="figure-caption"><strong>Fig 5:</strong> The third try of air bake-out looks normal in the end.
-		  (The current data is recorded as the operation voltage is set to -5000kV.)</figcaption>
-		</figure>
+		<div class="row" v-lazy-container="{ selector: 'img' }">
+		  <div id="fig3" class="col-12">
+		    <template v-if="img3">
+             <img data-src="air_bake-out/stage1.svg" data-loading="loading.svg" class="figure-img img-fluid rounded"  @click="img3=false">
+            </template>
+		    <template v-else>
+              <div style="position:relative;">
+	            <a class="btn btn-link" style="position:absolute;top:10px;" @click="img3=true">back</a>
+	          </div>
+	          <div class="overflow-auto">
+	    	    <embed src="air_bake-out/stage1.svg" width="1040" height="400">
+	      	  </div>
+            </template>
+		    <div class="figure-caption"><strong>Fig 3:</strong> The first try of air bake-out. 
+		    After start the ion pump, the pressure dropped slowly in the first day, and seemed not changed in the next few days.
+		    Typcally, the ion pump pressure can reach E-9 Torr region. Thus we decide to start cooling in advance.
+		    After the activation, the NEG current is finally stuck in 850nA, which is far from satisfied.</div>
+	      </div>
+		  <div id="fig4" class="col-12">
+		    <template v-if="img4">
+              <img data-src="air_bake-out/stage2.svg" data-loading="loading.svg" class="figure-img img-fluid rounded"  @click="img4=false">
+            </template>
+		    <template v-else>
+              <div style="position:relative;">
+	            <a class="btn btn-link" style="position:absolute;top:10px;" @click="img4=true">back</a>
+	          </div>
+	      	  <div class="overflow-auto">
+	    	    <embed src="air_bake-out/stage2.svg" width="1040" height="400">
+	      	  </div>
+            </template>
+		    <div class="figure-caption"><strong>Fig 4:</strong> After tighting some bolts, we start the second try of air bake-out.
+	  	      Although we had a better start than before, but the ion pump pressure is still stuck at 2E-8 Torr.
+		      After a few days I realised I made a mistake before that I forget to clean the angle valve before assembling the chamber.
+		      Therefore we stop this bake-out and change the angle valve to a clean one.</div>
+		  </div>
+		  <div id="fig5" class="col-12">
+	        <template v-if="img5">
+              <img data-src="air_bake-out/stage3.svg" data-loading="loading.svg" class="figure-img img-fluid rounded"  @click="img5=false">
+            </template>
+		    <template v-else>
+              <div style="position:relative;">
+	    	    <a class="btn btn-link" style="position:absolute;top:10px;" @click="img5=true">back</a>
+	    	  </div>
+	    	  <div class="overflow-auto">
+	      	    <embed src="air_bake-out/stage3.svg" width="1040" height="400">
+	      	  </div>
+            </template>
+		    <div class="figure-caption"><strong>Fig 5:</strong> The third try of air bake-out looks normal in the end.
+		      (The current data is recorded as the operation voltage is set to -5000kV.)</div>
+		  </div>
+		</div>
 		
 		<div class="anchor" id="wire-bonding"></div>
 		<h4><span style="color:#800000;font-family:comic sans ms,cursive;">Wire Bonding</span></h4>
@@ -128,44 +174,62 @@
 		<p>Suppose we want to connect gold wires to insulated wires later, the next step is winding insulated wires to the holder 
 		   (or blade alignment, discussing later). Before winding, the insulated material on the wire ends should be taken off.
 		   You can cut it with a knife or scissors, or even burn it with fire, whatever you like.
-		   A small trick is applied here to keep the wires neat: the wire should enclose previous wires when winding around the hole. (See Fig 6)</p>
+		   A small trick is applied here to keep the wires neat: the wire should enclose previous wires when winding around the hole. (See <a href="#img11">Fig 11</a>)</p>
 		<p>Since the blade and insulated wire is attached to the holder now, it seems impossible to use the bonder. 
-		   Therefore we use a spot welder instead. Using stainless steel sheets to assist is optional. Winding the gold wire then welding directly is fine too. (See Fig 8)
+		   Therefore we use a spot welder instead. Using stainless steel sheets to assist is optional. Winding the gold wire then welding directly is fine too. (See <a href="#img13">Fig 13</a>)
 		   Again, Parameters for the spot welder should be proper choosed so that joint is tight while the gold wire won't be broken.</p>
 		<div class="anchor" id="wire-bonding-figures"></div>
 		<h5>Figures</h5>
-		<figure class="figure">
-		  <img src="bond_blade/wire_bonder.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 1:</strong> Our wire bonder</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="bond_blade/RF_blade.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 2:</strong> An RF blade and a capacitor with gold wires</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="bond_blade/DC_blade.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 3:</strong> A already bonded DC blade</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="bond_blade/working_view.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 4:</strong> Our lovely blade in microscope view</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="bond_blade/holder_and_wire.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 5:</strong> Wind the insulated wire around the hole...</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="bond_blade/holder_with_wire.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 6:</strong> Then put blades...</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="bond_blade/spot_welder.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 7:</strong> Our spot welder. Press 'PROG' and 'CHG' can set the pulse power; Press 'RUN' to start welding.</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="bond_blade/au_wire_and_cu_wire.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 8:</strong> Welder leaving wires and finish this job!</figcaption>
-		</figure>
+		<div class="row" v-lazy-container="{ selector: 'img' }" v-viewer>
+          <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="bond_blade/wire_bonder.jpg" data-loading="bond_blade/wire_bonder_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 6:</strong> Our wire bonder</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="bond_blade/RF_blade.jpg" data-loading="bond_blade/RF_blade_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 7:</strong> An RF blade and a capacitor with gold wires</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="bond_blade/DC_blade.jpg" data-loading="bond_blade/DC_blade_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 8:</strong> A already bonded DC blade</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="bond_blade/working_view.jpg" data-loading="bond_blade/working_view_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 9:</strong> Our lovely blade in microscope view</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="bond_blade/holder_and_wire.jpg" data-loading="bond_blade/holder_and_wire_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 10:</strong> Wind the insulated wire around the hole...</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure" id="img11">
+			  <img data-src="bond_blade/holder_with_wire.jpg" data-loading="bond_blade/holder_with_wire_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 11:</strong> Then put blades...</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="bond_blade/spot_welder.jpg" data-loading="bond_blade/spot_welder_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 12:</strong> Our spot welder. Press 'PROG' and 'CHG' can set the pulse power; Press 'RUN' to start welding.</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure" id="img13">
+			  <img data-src="bond_blade/au_wire_and_cu_wire.jpg" data-loading="bond_blade/au_wire_and_cu_wire_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 13:</strong> Welder leaving wires and finish this job!</figcaption>
+	    	</figure>
+ 	      </div>
+	    </div>
 
 		<div class="anchor" id="blade-alignment-and-measurement"></div>
 		<h4><span style="color:#800000;font-family:comic sans ms,cursive;">Blade alignment and measurement</span></h4>
@@ -182,31 +246,41 @@
 		   An absolute coordinate system method is introduced. You may find the operation describe there cumbersome. (I feel the same.)
 		   A more feasible way is first align the blades with eye estimation. Then apply greedy algorithm to adjust the blades step by step.</p>
 		
-		<p>Lacking of experiments, our alignment result is far from satisfied (Fig 3). 
+		<p>Lacking of experiments, our alignment result is far from satisfied (<a href="#img16">Fig 16</a>). 
 		   We just pay too much attention on segments alignment than side edges alignment.
 		   I would adjust my tactic and be more patient if I would do it again.</p>
 		
-		<figure class="figure">
-		  <img src="alignment/aligning_blades.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 1:</strong> Aligning blades by F100 microscope...</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="alignment/checking_result.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 2:</strong> Observing the side view of the blades with another microscope...</figcaption>
-		</figure>
-		<figure class="figure">
-		  <embed src="alignment/alignment_results.svg" width="693" height="400">
-		  <figcaption class="figure-caption"><strong>Fig 3:</strong> This figure is combined with pictures of two side views,
-		  whose 4 edges are denoted by blue and orange box respectively. Suppose the blade's edge is straight, 
-		  the side view of 4 edges at the middle should form the pink box. The RF and DC null for a symmetry voltage is denoted as pink and green point.
-		  Using CCD camera's data, we estimate that the height difference of each blade pair is 348.4um and 263.9um.</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="alignment/ccd_picture.png" width="434" height="415" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 4:</strong> Buttom view of blades in CCD using LMU-5x-NUV as objective. 
-		  The reading of stage's vernier micrometer is showed in figure. It was read when each corner (orange circle) was tuned to the middle of CCD screen.
-		  We estimate that the gap between downner blades is about 421.5um.</figcaption>
-		</figure>
+		<div class="row" v-lazy-container="{ selector: 'img' }" v-viewer>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="alignment/aligning_blades.jpg" data-loading="alignment/aligning_blades_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 14:</strong> Aligning blades by F100 microscope...</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="alignment/checking_result.jpg" data-loading="alignment/checking_result_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 15:</strong> Observing the side view of the blades with another microscope...</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-12">
+	        <figure class="figure" id="img16">
+			  <img data-src="alignment/alignment_results.svg" data-loading="alignment/alignment_results_s.png" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 16:</strong> This figure is combined with pictures of two side views,
+		        whose 4 edges are denoted by blue and orange box respectively. Suppose the blade's edge is straight, 
+		        the side view of 4 edges at the middle should form the pink box. The RF and DC null for a symmetry voltage is denoted as pink and green point.
+		        Using CCD camera's data, we estimate that the height difference of each blade pair is 348.4um and 263.9um.</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="alignment/ccd_picture.png" data-loading="alignment/ccd_picture_s.png" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 17:</strong> Buttom view of blades in CCD using LMU-5x-NUV as objective. 
+		        The reading of stage's vernier micrometer is showed in this figure. It was read when each corner (orange circle) was tuned to the middle of CCD screen.
+		        We estimate that the gap between downner blades is about 421.5um.</figcaption>
+	    	</figure>
+ 	      </div>
+	    </div>
 		
 		<div class="anchor" id="oven-assembling-and-test"></div>
 		<h4><p><span style="color:#800000;font-family:comic sans ms,cursive;">Oven assembling and test</span></p></h4>
@@ -217,7 +291,7 @@
 		<div class="anchor" id="assembling"></div>
 		<h5>Assembling</h5>
 		<p>We use a plastic syringe needle as the container. 
-		   A customized metal bracket (see Fig 1) together with ceramic cement is used to fix the needle to the chamber. 
+		   A customized metal bracket (see <a href="#img18">Fig 18</a>) together with ceramic cement is used to fix the needle to the chamber. 
      	   A ceramic tube is also needed to seperate the needle and the braket so that the oven will not directly connect to the ground. 
 		   Again, we use insulated wires (should be abled to withstand 10A current) and stainless steel sheets to connect the oven with external current source. 
 		   You may also want a steel wire to poke the ytterbium into the needle. Most of things mentioned above can clean ultrasonically. 
@@ -239,7 +313,7 @@
 	    </p>
 		<div class="anchor" id="test-method"></div>
 		<h5>Test Method</h5>
-		<p>As Fig 5 shows, we connect a vacuum glass tube to a 4-way cross fitting, another two ways of which connect to a mocular pump and a current source.
+		<p>As <a href="#img21">Fig 21</a> shows, we connect a vacuum glass tube to a 4-way cross fitting, another two ways of which connect to a mocular pump and a current source.
 		   Be careful and don't let screws or wires touch the chamber, otherwise it'll short to the ground.
 		   The copper gasket can be reused in this test, as we don't need a very high vacuum condition.</p>
 		<p>Oven test is also a process of degassing. When increasing the current, you should see the pressure quickly increases, then slowly drop down.
@@ -337,47 +411,64 @@
 		</p>
 		<div class="anchor" id="oven-figures"></div>
 		<h5>Figures</h5>
-		<figure class="figure">
-		  <img src="oven/some_parts_for_oven.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 1:</strong> Some parts to assemble the oven. Can you tell the ytterbium 171 from the steel sheet?</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="oven/poking_ytterbium.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 2:</strong> Poking the ytterbium to the needle. Quite tedious work...</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="oven/assembled_ovens.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 3:</strong> Assembled ovens</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="oven/molecular_pump.jpg" width="504" height="672" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 4:</strong> Our molecular pump. 
-		  Open the valve and turn "PUMPING" button from 0 to 1 to open mechanical pump firstly. 
-		  Wait the pressure to get down below 0.1 mBar, then open molecular pump by press "Start/Stop" button.</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="oven/test_equipment.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 5:</strong> We use a vacuum glass tube to test the oven.</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="oven/abandoned_oven.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 6:</strong> 7.5A current is going through the oven. 
-		  Though temperature is very high, we still can't observe the ytterbium. This oven is abandoned finally.</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="oven/result_of_oven174.jpg" width="504" height="672" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 7:</strong> The spouted ytterbium 174.</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="oven/result_of_oven171.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 8:</strong> The spouted ytterbium 171. 
-		  Noticed the spot is a semicircle, which may casued by the last ytterbium sheet we put in.</figcaption>
-		</figure>
+		<div class="row" v-lazy-container="{ selector: 'img' }" v-viewer>
+          <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure" id="img18">
+			  <img data-src="oven/some_parts_for_oven.jpg" data-loading="oven/some_parts_for_oven_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 18:</strong> Some parts to assemble the oven. Can you tell the ytterbium 171 from the steel sheet?</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="oven/poking_ytterbium.jpg" data-loading="oven/poking_ytterbium_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 19:</strong> Poking the ytterbium to the needle. Quite tedious work...</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="oven/assembled_ovens.jpg" data-loading="oven/assembled_ovens_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 20:</strong> Assembled ovens</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure" id="img21">
+			  <img data-src="oven/test_equipment.jpg" data-loading="oven/test_equipment_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 21:</strong> We use a vacuum glass tube to test the oven.</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="oven/abandoned_oven.jpg" data-loading="oven/abandoned_oven_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 22:</strong> 7.5A current is going through the oven. 
+		        Though temperature is very high, we still can't observe the ytterbium. This oven is abandoned finally.</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="oven/result_of_oven171.jpg" data-loading="oven/result_of_oven171_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 23:</strong> The spouted ytterbium 171.</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="oven/result_of_oven174.jpg" data-loading="oven/result_of_oven174_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 24:</strong> The spouted ytterbium 174.</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="oven/molecular_pump.jpg" data-loading="oven/molecular_pump_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 25:</strong> Our molecular pump. 
+		        Open the valve and turn "PUMPING" button from 0 to 1 to open mechanical pump firstly. 
+		        Wait the pressure to get down below 0.1 mBar, then open molecular pump by press "Start/Stop" button.</figcaption>
+	    	</figure>
+ 	      </div>
+	    </div>
 		
 		<div class="anchor" id="assemble-chamber"></div>
 		<h4><span style="color:#800000;font-family:comic sans ms,cursive;">Assemble the Chamber</span></h4>
 
-		<p>Now we have all parts to assemble a chamber. We first connect the vacuum chamber with a 5-way cross through a nipple reducer, as Fig 1 shows.
+		<p>Now we have all parts to assemble a chamber. We first connect the vacuum chamber with a 5-way cross through a nipple reducer, as <a href="#img26">Fig 26</a> shows.
 		   Then we install the blade holder and the oven. The next step is to connect insulated Cu wires of oven, DC and RF electrodes with the feedthrough.
 		   Finally, we install all other vacuum parts to the chamber. Click <a href="chamber.html">here</a> to see how we assembling the chamber.</p>
 		   
@@ -414,40 +505,59 @@
 		   We finally rescued the holder with ceramic cement. Here's the suggestion: <em>take care of the last 10 minutes.</em> 
 		   You definitely don't want to repeat what you did a month ago.</p>
 		
-		<figure class="figure">
-		  <img src="chamber/main_structure_of_chamber.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 1:</strong> Main body of the chamber.</figcaption>
-		</figure>
-        <figure class="figure">
-		  <img src="chamber/subd_parts.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 2:</strong> Parts to assemble SubD connector.</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="chamber/assemble_dc_feedthrough.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 3:</strong> Install DC feedthrough is not easy...</figcaption>
-		</figure>
-        <figure class="figure">
-		  <img src="chamber/top_view.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 4:</strong> Top view of the chamber.</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="chamber/buttom_view.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 5:</strong> Buttom view od the chamber.</figcaption>
-		</figure>
-        <figure class="figure">
-		  <img src="chamber/oven_feedthrough.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 6:</strong> Oven Feedthrough. Connect red circled pin to the current source and green pin 
-		  to the ground for Yb174 oven. Connect them with pink circled pin for Yb171 oven. (Either can be connected to ground.)</figcaption>
-		</figure>
-		<figure class="figure">
-		  <img src="chamber/rf_feedthrough.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 7:</strong> RF Feedthrough. The pins' mark corresponds to RF and ground electrodes showed in Fig 4 and 5.</figcaption>
-		</figure>
-        <figure class="figure">
-		  <img src="chamber/dc_feedthrough.jpg" width="672" height="504" class="figure-img img-fluid rounded">
-		  <figcaption class="figure-caption"><strong>Fig 8:</strong> DC Feedthrough. The ten colored numbers corresponds to denoted electrodes showed in Fig 4 and 5.
-		  The other 15 pins is denoted by white dashes as they are open circuits.</figcaption>
-		</figure>
+		<div class="row" v-lazy-container="{ selector: 'img' }" v-viewer>
+          <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure" id="img26">
+			  <img data-src="chamber/main_structure_of_chamber.jpg" data-loading="chamber/main_structure_of_chamber_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 26:</strong> Main body of the chamber.</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="chamber/subd_parts.jpg" data-loading="chamber/subd_parts_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 27:</strong> Parts to assemble SubD connector.</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="chamber/assemble_dc_feedthrough.jpg" data-loading="chamber/assemble_dc_feedthrough_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 28:</strong> Install DC feedthrough is not easy...</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure" id="img29">
+			  <img data-src="chamber/top_view.jpg" data-loading="chamber/top_view_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 29:</strong> Top view of the chamber.</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure" id="img30">
+			  <img data-src="chamber/buttom_view.jpg" data-loading="chamber/buttom_view_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 30:</strong> Buttom view od the chamber.</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="chamber/oven_feedthrough.jpg" data-loading="chamber/oven_feedthrough_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 31:</strong> Oven Feedthrough. Connect red circled pin to the current source and green pin 
+		        to the ground for Yb174 oven. Connect them with pink circled pin for Yb171 oven. (Either can be connected to ground.)</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="chamber/rf_feedthrough.jpg" data-loading="chamber/rf_feedthrough_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 32:</strong> RF Feedthrough. The pins' mark corresponds to RF and ground electrodes showed in 
+			    <a href="#img29">Fig 29</a> and <a href="#img30">Fig 30</a>.</figcaption>
+	    	</figure>
+ 	      </div>
+		  <div class="col-xs-12 col-sm-12 col-md-6">
+	        <figure class="figure">
+			  <img data-src="chamber/dc_feedthrough.jpg" data-loading="chamber/dc_feedthrough_s.jpg" class="figure-img img-fluid rounded">
+		      <figcaption class="figure-caption"><strong>Fig 33:</strong> DC Feedthrough. The ten colored numbers corresponds to denoted electrodes showed in 
+			    <a href="#img29">Fig 29</a> and <a href="#img30">Fig 30</a>. The other 15 pins is denoted by white dashes as they are open circuits.</figcaption>
+	    	</figure>
+ 	      </div>
+	    </div>
       </main>
     </div>
   </div>
@@ -455,7 +565,13 @@
 
 <script>
 module.exports = {
-
+  data: function() {
+    return {
+      img3: true,
+	  img4: true,
+	  img5: true
+    };
+  }
 };
 </script>
 

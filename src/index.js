@@ -2,12 +2,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './custom.css';
 
+import 'viewerjs/dist/viewer.css'
+import Viewer from 'v-viewer'
+
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Chamber from "./chamber.vue";
-import Timeline from "./timeline.vue";
+import VueLazyload from 'vue-lazyload'
+
+//懒加载
+const Chamber = () => import('./chamber.vue')
+const Timeline = () => import('./timeline.vue')
 
 Vue.use(VueRouter)
+Vue.use(VueLazyload)
+Vue.use(Viewer)
 
 // 0. 如果使用模块化机制编程，导入Vue和VueRouter，要调用 Vue.use(VueRouter)
 
@@ -21,8 +29,8 @@ Vue.use(VueRouter)
 // 或者，只是一个组件配置对象。
 // 我们晚点再讨论嵌套路由。
 const routes = [
-  { path: '/', component: Timeline },
-  { path: '/chamber', component: Chamber }
+  { path: '/blade-trap', component: Timeline },
+  { path: '/blade-trap/chamber', component: Chamber }
 ]
 
 // 3. 创建 router 实例，然后传 `routes` 配置

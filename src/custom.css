@@ -17,3 +17,15 @@ div.container {
   margin-top: -60px; /*和顶部fix的高度一致*/
   visibility: hidden;
 }
+
+.bd-title {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.bd-lead {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
