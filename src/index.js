@@ -1,5 +1,5 @@
-//import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './custom.css';
 
 import 'viewerjs/dist/viewer.css'
@@ -12,6 +12,20 @@ import VueLazyload from 'vue-lazyload'
 //懒加载
 const Chamber = () => import('./chamber.vue')
 const Timeline = () => import('./timeline.vue')
+const Chat = () => import('./chat.vue')
+
+//import Chamber from './chamber.vue'
+//import Timeline from './timeline.vue'
+//import Chat from './chat.vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import VueCookies from 'vue-cookies'
+Vue.use(VueCookies)
+Vue.use(VueAxios, axios)
+
+// This imports <b-modal> as well as the v-b-modal directive as a plugin:
+import { ModalPlugin } from 'bootstrap-vue'
+Vue.use(ModalPlugin)
 
 Vue.use(VueRouter)
 Vue.use(VueLazyload)
@@ -30,7 +44,8 @@ Vue.use(Viewer)
 // 我们晚点再讨论嵌套路由。
 const routes = [
   { path: '/blade-trap', component: Timeline },
-  { path: '/blade-trap/chamber', component: Chamber }
+  { path: '/blade-trap/chamber', component: Chamber },
+  { path: '/blade-trap/chatting', component: Chat }
 ]
 
 // 3. 创建 router 实例，然后传 `routes` 配置
