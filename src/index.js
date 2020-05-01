@@ -10,18 +10,21 @@ import VueRouter from 'vue-router'
 import VueLazyload from 'vue-lazyload'
 
 //懒加载
-const Chamber = () => import('./chamber.vue')
 const Timeline = () => import('./timeline.vue')
+const Chamber = () => import('./chamber.vue')
+const Ions = () => import('./ions.vue')
 const Chat = () => import('./chat.vue')
 
-//import Chamber from './chamber.vue'
 //import Timeline from './timeline.vue'
-//import Chat from './chat.vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueCookies from 'vue-cookies'
+import VueKatex from 'vue-katex';
+import 'katex/dist/katex.min.css';
+Vue.use(VueKatex)
 Vue.use(VueCookies)
 Vue.use(VueAxios, axios)
+
 
 // This imports <b-modal> as well as the v-b-modal directive as a plugin:
 import { ModalPlugin } from 'bootstrap-vue'
@@ -45,6 +48,7 @@ Vue.use(Viewer)
 const routes = [
   { path: '/blade-trap', component: Timeline },
   { path: '/blade-trap/chamber', component: Chamber },
+  { path: '/blade-trap/ions', component: Ions },
   { path: '/blade-trap/chatting', component: Chat }
 ]
 
