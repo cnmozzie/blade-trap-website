@@ -6,8 +6,17 @@
         <section class="year">
           <h3>2020</h3>
 		  <section>
+            <h4>May</h4>
+            <dl>
+              <dt>1st</dt>
+              <dd>Add the first entry to the BTX Wiki - it's about toric code.</dd>
+            </dl>
+          </section>
+		  <section>
             <h4>April</h4>
             <dl>
+			  <dt>14th</dt>
+              <dd>The group meeting resumed. Start working on some theory.</dd>
               <dt>10th</dt>
               <dd>Page updated.</dd>
             </dl>

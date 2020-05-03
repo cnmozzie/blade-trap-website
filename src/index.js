@@ -10,12 +10,14 @@ import VueRouter from 'vue-router'
 import VueLazyload from 'vue-lazyload'
 
 //懒加载
+//import Timeline from './timeline.vue'
 const Timeline = () => import('./timeline.vue')
 const Chamber = () => import('./chamber.vue')
 const Ions = () => import('./ions.vue')
 const Chat = () => import('./chat.vue')
+const ToricCode = () => import('./ions/toric_code.vue')
+const RemoteIonsEntanglement = () => import('./ions/remote_ions_entanglement.vue')
 
-//import Timeline from './timeline.vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueCookies from 'vue-cookies'
@@ -48,7 +50,20 @@ Vue.use(Viewer)
 const routes = [
   { path: '/blade-trap', component: Timeline },
   { path: '/blade-trap/chamber', component: Chamber },
-  { path: '/blade-trap/ions', component: Ions },
+  { path: '/blade-trap/ions', component: Ions,
+      children: [
+        {
+          // 当 /blad-trap/ions/toric_code 匹配成功，
+          // ToricCode 会被渲染在 Ions 的 <router-view> 中
+          path: 'toric_code',
+          component: ToricCode
+        },
+		{
+          path: 'remote_ions_entanglement',
+          component: RemoteIonsEntanglement
+        }
+      ]
+  },
   { path: '/blade-trap/chatting', component: Chat }
 ]
 
