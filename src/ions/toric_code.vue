@@ -159,8 +159,7 @@
            operator on the lattice? Since some \(X\) loops fail to commute with some \(B_f\) , this will take
            \(|\zeta\rangle\) out of the code space entirely. However, we can define a dual-lattice \(\Gamma^*\). 
 		   We define the dual lattice as a new lattice that has lattice vertices as faces and lattice faces as vertices.
-           Here, if we apply the \(X\) operator on a path as before we really will get a new ground state!
-           In fact, we get a new ground state whenever we the paths are distinct.</p>
+           Here, if we apply the \(X\) operator on a path as before we really will get a new ground state!</p>
 	  </div>
 	  <div class="col-center-block">  
         <embed src="toric_code/lattice.svg">
@@ -183,8 +182,8 @@
            \(\gamma\) be a set of qubits that a closed loop around the Torus on the dual lattice. Then let \(O^x_\gamma\) be the
            element of the Pauli group that acts as the \(X\) operator on every qubit in \(\gamma\)
            and acts as the identity on every other qubit. We call such an operator a <strong>path operator</strong>.
-		   Noted that \(A_v\) commute with \(O^x_\gamma\) and it does not change 
-		   the ground state \(|\zeta\rangle\). Thus we can use it freely to change the path of \(O^x_\gamma\). It turns out that
+		   <em>Noted that \(A_v\) commute with \(O^x_\gamma\) and it does not change 
+		   the ground state \(|\zeta\rangle\). Thus we can use it freely to change the path of \(O^x_\gamma\).</em> It turns out that
            for any paths \(\gamma\), \(\gamma'\) that wrap around the Torus vertically we have 
 		   \(O_{\gamma}^{x}|\zeta\rangle=O_{\gamma^{\prime}}^{x}|\zeta\rangle\). 
 		   Similarly, if \(\beta\) and \(\beta'\) are any two paths that wrap around the torus horizontally we have

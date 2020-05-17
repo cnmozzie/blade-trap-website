@@ -17,6 +17,7 @@ const Ions = () => import('./ions.vue')
 const Chat = () => import('./chat.vue')
 const ToricCode = () => import('./ions/toric_code.vue')
 const RemoteIonsEntanglement = () => import('./ions/remote_ions_entanglement.vue')
+const PlanarCode = () => import('./ions/planar_code.vue')
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -61,6 +62,10 @@ const routes = [
 		{
           path: 'remote_ions_entanglement',
           component: RemoteIonsEntanglement
+        },
+		{
+          path: 'planar_code',
+          component: PlanarCode
         }
       ]
   },
