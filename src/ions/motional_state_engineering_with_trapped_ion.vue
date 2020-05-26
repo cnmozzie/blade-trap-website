@@ -92,7 +92,7 @@
            &=\frac{g}{2}\left(\hat{a} e^{i \phi}+\hat{a}^{\dagger} e^{-i \phi}\right),
            \end{aligned}\tag{3}$$
 		   where we have used the resonance condition \(\omega=\omega_z\), i.e. setting the frequency of driving field \(\omega\)
-           equal to the motional frequency !z, and also the rotating wave approximation. Hence we can see
+           equal to the motional frequency \(\omega_z\), and also the rotating wave approximation. Hence we can see
            the evolution operator \(U=e^{-i\hat{H}_{1,I}t}\) is just the displacement operator with 
 		   \(\alpha=-ige^{-i\phi}/2t\).</p>
 		<p>The method which use spin-independent force has just the same interaction Hamiltonian but with a different
@@ -139,31 +139,79 @@
            state is to engineer a master equation \(\mathrm{d} \rho / \mathrm{d} t=\mathcal{L}(\cdot) \rho\) 
 		   with a specific Lindblad super-operator \(\mathcal{L}(\cdot)\)
            such that the steady state of this equation is our target quantum state. This method has been
-           successfully realized by ETH trapped ion group in motional state engineering [17]. Following this
+           successfully realized by ETH trapped ion group in motional state engineering [17, 39]. Following this
            work, we will illustrate the principle of the displacement and squeezing operations based on this
            dissipative method.</p>
-		<p>We all are very familiar with resolved sideband cooling of trapped ions [1], it can be implemented by
-           alternating a red-sideband pulse with a dissipative process, i.e. the optical pumping to constantly
-           dissipate the motional energy into the vacuum. We define the red-sideband coupling strength as \(\Omega_r\)
-		   (i.e. the red-sideband Hamiltonian is \(\hat{H}_r=\Omega_r(\hat{a}\sigma_++\hat{a}^\dagger\sigma_-)\)) 
-		   and the pumping rate as \(\Gamma\). If \(\Gamma\gg\Omega_r\)which is always true in the sideband cooling process, 
-		   the evolution of motional state density matrix \(\hat{\rho}\) can be described by a master equation below 
-		   (which can be found in the supplementary material of Ref. [17]):
-		   $$\frac{\mathrm{d} \hat{\rho}}{\mathrm{d} t}=\frac{2 \Omega_{r}^{2}}{\Gamma} \mathcal{L}(\hat{a}) \hat{\rho}=\frac{2 \Omega_{r}^{2}}{\Gamma}\left[\hat{a} \hat{\rho} \hat{a}^{\dagger}-\frac{1}{2}\left(\hat{a}^{\dagger} \hat{a} \hat{\rho}+\hat{\rho} \hat{a}^{\dagger} \hat{a}\right)\right]$$
-		   where the steady state is readily to be seen as the vacuum state j0i. Just as a simple analogy, if
-           we let a "modified" red-sideband pulse alternate with the optical pumping where the "modified"
-           red-sideband Hamiltonian is \(\hat{H}_{r}=\Omega_{r}\left(\hat{a} \sigma_{+}+\hat{a}^{\dagger} \sigma_{-}\right)\), then this process can be described 
-		   by a master equation \(\mathrm{d}\rho/\mathrm{d}t=2\Omega^2/\Gamma\mathcal{L}(\hat{K}\rho)\) and the steady state is just 
-		   a state \(|\cdot\rangle\) annihilated by the operator \(\hat{K}\). We have already known that a coherent state is just 
+		<p>We start out by formulating the general spin-motion Hamiltonian
+		   \(\hat{H}=\Omega\left(\hat{K} \sigma_{+}+\hat{K}^{\dagger} \sigma_{-}\right)\),
+		   where \(\hat{K}\) assumed to be a general operator acting only on \(H_\text{motion}\).
+		   The dissipation is a decay of the upper spin state \(\left|\uparrow\right\rangle\) into the spin-down state
+           \(\left|\downarrow\right\rangle\) with a rate \(\Gamma\). It is described by the <em>Lindblad operator</em>
+		   \(\hat{L}=\sqrt{\Gamma}\hat{\sigma}_-\).
+		   The time evolution of the ion’s state \(\hat{\rho}\) ion under the action of the spin-motion
+           Hamiltonian and the dissipation is described by a Master equation in Lindblad form as
+		   $$\frac{\mathrm{d} \hat{\rho}}{\mathrm{d} t}=-i[\hat{H}, \hat{\rho}]+\hat{L} \hat{\rho} \hat{L}^{\dagger}-\frac{1}{2}\left\{\hat{L}^{\dagger} \hat{L}, \hat{\rho}\right\}.\tag{7}$$
+		   The first term on the right-hand side describes the unitary evolution of the
+           system and is, together with the left-hand side, similar to the <em>von Neumann equation</em>.
+		   The other terms on the right-hand are sometimes summarised as
+           <em>Dissipator \(\mathcal{D}(\hat{\rho})\)</em> or <em>Lindblad superoperator</em> describing the non-unitary evolution
+           of the system, with quantum jumps from the upper to the lower spin state 
+		   \(\left|\uparrow\right\rangle\left\langle\uparrow\right|\rightarrow\left| \downarrow\right\rangle\left\langle\downarrow\right|\) at a rate \(\Gamma\).</p>
+		<p>Equation 7 may be simplified to describe the experimental situation more
+           efficiently by restricting the discussion to the regime where the dissipation is
+           much stronger than the coherent driving: \(\Omega\ll\Gamma\). Introducing the partial
+           matrix elements (motional parts of the density matrix) \(\hat{\rho}_{i j}=\left\langle i\left|\hat{\rho}_{\text {ion }}\right| j\right\rangle\) 
+		   with \(\{i, j\} \in\{\uparrow, \downarrow\}\), the full density matrix is re-written as
+		   $$\hat{\rho}_{\text {ion }}=\hat{\rho}_{\downarrow \downarrow}\left|\downarrow\right\rangle\left\langle\downarrow\right|+\hat{\rho}_{\downarrow \uparrow}\left|\downarrow\right\rangle\left\langle\uparrow\right|+\hat{\rho}_{\uparrow \downarrow}\left|\uparrow\right\rangle\left\langle\downarrow\right|+\hat{\rho}_{\uparrow \uparrow}\left|\uparrow\right\rangle\left\langle\uparrow\right|,\tag{8}$$
+		   where here and from now on the tensor product symbol \(\otimes\) is omitted for simplicity.
+           Inserted into the Master equation 7 four coupled differential equations for motional desity operators can be found:
+           $$\frac{\mathrm{d} \hat{\rho}_{\downarrow \downarrow}}{\mathrm{d} t} =-i \Omega\left(\hat{K}^{\dagger} \hat{\rho}_{\uparrow \downarrow}-\hat{\rho}_{\downarrow \uparrow} \hat{K}\right)+\Gamma \hat{\rho}_{\uparrow \uparrow},\tag{9}$$
+           $$\frac{\mathrm{d} \hat{\rho}_{\uparrow \uparrow}}{\mathrm{d} t} =-i \Omega\left(\hat{K} \hat{\rho}_{\downarrow \uparrow}-\hat{\rho}_{\uparrow \downarrow} \hat{K}^{\dagger}\right)-\Gamma \hat{\rho}_{\uparrow \uparrow},\tag{10}$$
+           $$\frac{\mathrm{d} \hat{\rho}_{\uparrow \downarrow}}{\mathrm{d} t} =-i \Omega\left(\hat{K} \hat{\rho}_{\downarrow \downarrow}-\hat{\rho}_{\uparrow \uparrow} \hat{K}\right)-\frac{\Gamma}{2} \hat{\rho}_{\uparrow \downarrow},\tag{11}$$
+           $$\frac{\mathrm{d} \hat{\rho}_{\downarrow \uparrow}}{\mathrm{d} t} =-i \Omega\left(\hat{K}^{\dagger} \hat{\rho}_{\uparrow \uparrow}-\hat{\rho}_{\downarrow \downarrow} \hat{K}^{\dagger}\right)-\frac{\Gamma}{2} \hat{\rho}_{\downarrow \uparrow}.\tag{12}$$
+           We assume the system initially in the lower spin state \(\hat{\rho}(t=0)=\hat{\rho}_{\downarrow \downarrow}\left|\downarrow\right\rangle\left\langle\downarrow\right|\), 
+		   which can be achieved by optical pumping experimentally. With this and the initial statement \(\Omega\ll\Gamma\), let's try to solve equation 11.
+		   First, we introduce an integrating factor and rearrange the terms:
+		   $$e^{\Gamma t / 2} \frac{\mathrm{d} \hat{\rho}_{\uparrow \downarrow}}{\mathrm{d} t}+\frac{\Gamma}{2} e^{\Gamma t / 2} \hat{\rho}_{\uparrow \downarrow}=-i e^{\Gamma t / 2} \Omega\left(\hat{K} \hat{\rho}_{\downarrow \downarrow}-\hat{\rho}_{\uparrow \uparrow} \hat{K}\right). \tag{13}$$
+		   Then we integrate the equation in t:
+		   $$e^{\Gamma t / 2}\hat{\rho}_{\uparrow \downarrow}(t)=-i \Omega \int_{0}^{t} e^{\Gamma t^{\prime} / 2}\left(\hat{K} \hat{\rho}_{\downarrow \downarrow}\left(t^{\prime}\right)-\hat{\rho}_{\uparrow \uparrow}\left(t^{\prime}\right) \hat{K}\right) \mathrm{d} t^{\prime}. \tag{14}$$
+		   Now integrating by parts gives
+		   $$\begin{aligned}
+           \hat{\rho}_{\uparrow \downarrow}(t)=-& i \frac{2 \Omega}{\Gamma}\left(\left(\hat{K} \hat{\rho}_{\downarrow \downarrow}(t)-\hat{\rho}_{\uparrow \uparrow}(t) \hat{K}\right)-e^{-\Gamma t / 2} \hat{K}\right) \\
+           &+i \frac{2 \Omega}{\Gamma} e^{-\Gamma t / 2} \int_{0}^{t} e^{\Gamma t^{\prime} / 2}\left(\hat{K} \frac{\mathrm{d} \hat{\rho}_{\downarrow \downarrow}\left(t^{\prime}\right)}{\mathrm{d} t^{\prime}}-\frac{d \hat{\rho}_{\uparrow \uparrow}\left(t^{\prime}\right)}{d t^{\prime}} \hat{K}\right) \mathrm{d} t^{\prime}.
+           \end{aligned}\tag{15}$$
+		   The second term on the right side will be neglected as it turns out by integrating
+           once more to have an additional factor of \(1/\gamma\) and thus will be small.
+           Following these steps for all three differential equations 10, 11 and 12 we retrieve
+		   $$\begin{aligned}
+           \hat{\rho}_{\uparrow \downarrow}(t) & \simeq-i \frac{2 \Omega}{\Gamma}\left[\left(\hat{K} \hat{\rho}_{\downarrow \downarrow}(t)-\hat{\rho}_{\uparrow \uparrow}(t) \hat{K}\right)-e^{-\Gamma t / 2} \hat{K}\right], \\
+           \hat{\rho}_{\downarrow \uparrow}(t) & \simeq-i \frac{2 \Omega}{\Gamma}\left[\left(\hat{K}^{\dagger} \hat{\rho}_{\uparrow \uparrow}(t)-\hat{\rho}_{\downarrow \downarrow}(t) \hat{K}^{\dagger}\right)+e^{-\Gamma t / 2} \hat{K}^{\dagger}\right], \\
+           \hat{\rho}_{\uparrow \uparrow}(t) & \simeq-i \frac{\Omega}{\Gamma}\left(\hat{K} \hat{\rho}_{\downarrow \uparrow}(t)-\hat{\rho}_{\uparrow \downarrow}(t) \hat{K}^{\dagger}\right).
+           \end{aligned}\tag{16}$$
+		   The terms proportional to \(e^{-\Gamma t / 2}\) can be neglected as \(t\gg1/\Gamma\) for the
+           time of interest. Inserting these results in equation 9 and neglecting \(\hat{\rho}_{\uparrow \uparrow}\)
+           terms whose order is about \(1/\Gamma^2\) results in the desired equation
+		   $$\frac{\mathrm{d} \hat{\rho}_{\downarrow \downarrow}}{\mathrm{d} t}=\frac{4 \Omega^{2}}{\Gamma} \hat{K} \hat{\rho}_{\downarrow \downarrow} \hat{K}^{\dagger}-\frac{1}{2} \frac{4 \Omega^{2}}{\Gamma}\left\{\hat{K}^{\dagger} \hat{K}, \hat{\rho}_{\downarrow \downarrow}\right\}.\tag{17}$$
+		   This result is reminiscent of the non-unitary part of the Lindblad equation 7
+           with \(\hat{K}\) in the role of a new Lindblad operator \(\hat{L}'\) and the decay rate \(4\Omega^2/\Gamma\) 
+		   with \(\hat{L}'=\frac{2\Omega}{\sqrt{\Gamma}}\hat{K}\). As no unitary part exists, the steady state \(|\psi\rangle\) 
+		   of this process is simply given by \(\hat{K}|\psi\rangle=0\). (You may want to check yourself that by treating
+		   \(\hat{\rho}_{\downarrow \downarrow}\sim1\), \(\hat{\rho}_{\uparrow \downarrow}\sim1/\Gamma\), 
+		   \(\hat{\rho}_{\downarrow \uparrow}\sim1/\Gamma\), \(\hat{\rho}_{\uparrow \uparrow}\sim1/\Gamma^2\), above deduction is self-consistent.)</p>
+		<p>For the red-sideband Hamiltonian \(\hat{H}_r=\Omega_r(\hat{a}\sigma_++\hat{a}^\dagger\sigma_-)\), \(\hat{K}=\hat{a}\).
+		   The steady state is readily to be seen as the vacuum state \(|0\rangle\), 
+		   which is just the expect result of the resolved sideband cooling [1].
+		   By engineering the Hamiltonian, one can get other desired steady state. 
+		   We have already known that a coherent state is just 
 		   a displaced vacuum state \(|\alpha\rangle=\hat{D}(\alpha)|0\rangle\), and it can be annihilated by \(\hat{D}(\alpha)\hat{a}\hat{D}^\dagger(\alpha)\). 
-		   Therefore, if we set \(K=\hat{D}(\alpha)\hat{a}\hat{D}^\dagger(\alpha)=\hat{a}-\alpha\), we can
+		   Therefore, if we set \(\hat{K}=\hat{D}(\alpha)\hat{a}\hat{D}^\dagger(\alpha)=\hat{a}-\alpha\), we can
            acquire the coherent state as the steady state of the "modified" sideband cooling process. In the
-           same manner, if we set \(K=\hat{S}(\xi(r, \theta)) \hat{a} \hat{S}^{\dagger}(\xi(r, \theta))=\cosh (r) \hat{a}+e^{i \theta} \sinh (r) \hat{a}^{\dagger}\), 
+           same manner, if we set \(\hat{K}=\hat{S}(\xi(r, \theta)) \hat{a} \hat{S}^{\dagger}(\xi(r, \theta))=\cosh (r) \hat{a}+e^{i \theta} \sinh (r) \hat{a}^{\dagger}\), 
 		   the steady state is the squeezed vacuum state. This method is very ingenious and convenient, we first need to engineer the
-           Hamiltonian \(\hat{H}_-\) and then alternate the pulse of this Hamiltonian with the optical pumping just
+           Hamiltonian \(\hat{H}\) and then alternate the pulse of this Hamiltonian with the optical pumping just
            after the Doppler cooling of the ion. The steady state is independent on the initial state, i.e. all the
            initial states will in principle be pumped into the steady state. Also, the dissipative type method is
-           very robust to noise. The construction of the Hamiltonian \(\hat{H}_-\) is easy because either \(\hat{D}(\alpha)\hat{a}\hat{D}^\dagger(\alpha)\)
+           very robust to noise. The construction of the Hamiltonian \(\hat{H}\) is easy because either \(\hat{D}(\alpha)\hat{a}\hat{D}^\dagger(\alpha)\)
            or \(\hat{S}(\xi)\hat{a}\hat{S}^\dagger(\xi)\) is just a linear combination of carrier, red-sideband and blue-sideband Hamiltonians.
            Besides, by the climbing ladder operator \(\hat{K}^\dagger\), we can generate many other nonclassical states such
            as the displaced Fock state, the squeezed Fock state and etc.</p>
@@ -171,44 +219,44 @@
 		<h3>References</h3>
 		<div class="mw-references-columns">
 		  <ol>
-		    <li>D. Leibfried, R. Blatt, C. Monroe and D. Wineland (2003). "Quantum dynamics of single trapped ions". <em>Reviews of Modern Physics</em>. <strong>75</strong>: 281-324.</li>
-			<li>Samuel L. Braunstein and Peter van Loock (2005). "Quantum information with continuous variables". <em>Reviews of Modern Physics</em>. <strong>77</strong>: 513-577.</li>
+		    <li>D. Leibfried, R. Blatt, C. Monroe and D. Wineland (2003). <a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.75.281">"Quantum dynamics of single trapped ions"</a>. <em>Reviews of Modern Physics</em>. <strong>75</strong>: 281-324.</li>
+			<li>Samuel L. Braunstein and Peter van Loock (2005). <a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.77.513">"Quantum information with continuous variables"</a>. <em>Reviews of Modern Physics</em>. <strong>77</strong>: 513-577.</li>
 			<li>Christian Weedbrook, Stefano Pirandola, Raúl García-Patrón, Nicolas J. Cerf, Timothy C. Ralph, Jeffrey H. Shapiro and Seth Lloyd (2012). <a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.84.621">"Quantum information with continuous variables"</a>. <em>Reviews of Modern Physics</em>. <strong>84</strong>: 621-669.</li>
 			<li>Luca Pezzè, Augusto Smerzi, Markus K. Oberthaler, Roman Schmied and Philipp Treutlein (2018). <a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.90.035005">"Quantum metrology with nonclassical states of atomic ensembles"</a>. <em>Reviews of Modern Physics</em>. <strong>90</strong>: 035005.</li>
-			<li>Daniel Braun, Gerardo Adesso, Fabio Benatti, Roberto Floreanini, Ugo Marzolino, Morgan W. Mitchell and Stefano Pirandola. (2018). "Quantum-enhanced measurements without entanglement". <em>Reviews of Modern Physics</em>. <strong>90</strong>: 035006.</li>
-			<li>D. M. Meekhof, C. Monroe, B. E. King, W. M. Itano and D. J. Wineland (1996). "Generation of nonclassical motional states of a trapped atom". <em>Physical Review Letters</em>. <strong>76</strong>: 1796-1799.</li>
-			<li>D. Leibfried, D. M. Meekhof, B. E. King, C. Monroe, W. M. Itano and D. J. Wineland (1996). "Experimental determination of the motional quantum state of a trapped atom". <em>Physical Review Letters</em>. <strong>77</strong>: 4281-4285.</li>
+			<li>Daniel Braun, Gerardo Adesso, Fabio Benatti, Roberto Floreanini, Ugo Marzolino, Morgan W. Mitchell and Stefano Pirandola. (2018). <a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.90.035006">"Quantum-enhanced measurements without entanglement"</a>. <em>Reviews of Modern Physics</em>. <strong>90</strong>: 035006.</li>
+			<li>D. M. Meekhof, C. Monroe, B. E. King, W. M. Itano and D. J. Wineland (1996). <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.76.1796">"Generation of nonclassical motional states of a trapped atom"</a>. <em>Physical Review Letters</em>. <strong>76</strong>: 1796-1799.</li>
+			<li>D. Leibfried, D. M. Meekhof, B. E. King, C. Monroe, W. M. Itano and D. J. Wineland (1996). <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.77.4281">"Experimental determination of the motional quantum state of a trapped atom"</a>. <em>Physical Review Letters</em>. <strong>77</strong>: 4281-4285.</li>
 			<li>C. Monroe, D. M. Meekhof, B. E. King and D. J. Wineland (1996). <a href="https://science.sciencemag.org/content/272/5265/1131">"A “Schrödinger Cat” Superposition State of an Atom"</a>. <em>Science</em>. <strong>272</strong> (5265): 1131-1136.</li>
-			<li>P. Bertet, A. Auffeves, P. Maioli, S. Osnaghi, T. Meunier, M. Brune, J. M. Raimond and S. Haroche (2002). "Direct measurement of the wigner function of a one-photon fock state in a cavity". <em>Physical Review Letters</em>. <strong>89</strong>: 200402.</li>
+			<li>P. Bertet, A. Auffeves, P. Maioli, S. Osnaghi, T. Meunier, M. Brune, J. M. Raimond and S. Haroche (2002). <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.89.200402">"Direct measurement of the wigner function of a one-photon fock state in a cavity"</a>. <em>Physical Review Letters</em>. <strong>89</strong>: 200402.</li>
 			<li>Samuel Deléglise, Igor Dotsenko, Clément Sayrin, Julien Bernu, Michel Brune, Jean-Michel Raimond and Serge Haroche (2008). <a href="https://www.nature.com/articles/nature07288">"Reconstruction of non-classical cavity field states with snapshots of their decoherence"</a>. <em>Nature</em>. <strong>455</strong>: 510-514.</li>
-			<li>Markus Aspelmeyer, Tobias J. Kippenberg and Florian Marquardt (2014). "Cavity optomechanics". <em>Reviews of Modern Physics</em>. <strong>86</strong>: 1391-1452.</li>
-			<li>A. Wallraff, D. I. Schuster, A. Blais, L. Frunzio, R.-. S. Huang, J. Majer, S. Kumar, S. M. Girvin and R. J. Schoelkopf (2004). "Strong coupling of a single photon to a superconducting qubit using circuit quantum electrodynamics". <em>Nature</em>. <strong>431</strong> (7005): 162-167.</li>
-			<li>W. Wang, L. Hu, Y. Xu, K. Liu, Y. Ma, Shi-Biao Zheng, R. Vijay, Y. P. Song, L.-M. Duan and L. Sun (2017). "Converting quasiclassical states into arbitrary fock state superpositions in a superconducting circuit". <em>Physical Review Letters</em>. <strong>118</strong>: 223604.</li>
-			<li>W. Wang, Y. Wu, Y. Ma, W. Cai, L. Hu, X. Mu, Y. Xu, Zi-Jie Chen, H. Wang, Y. P. Song, H. Yuan, C.-L. Zou, L.-M. Duan and L. Sun (2019). "Heisenberg-limited single-mode quantum metrology in a superconducting circuit". <em>Nature Communications</em>. <strong>10</strong> (1): 4382.</li>
+			<li>Markus Aspelmeyer, Tobias J. Kippenberg and Florian Marquardt (2014). <a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.86.1391">"Cavity optomechanics"</a>. <em>Reviews of Modern Physics</em>. <strong>86</strong>: 1391-1452.</li>
+			<li>A. Wallraff, D. I. Schuster, A. Blais, L. Frunzio, R.-. S. Huang, J. Majer, S. Kumar, S. M. Girvin and R. J. Schoelkopf (2004). <a href="https://www.nature.com/articles/nature02851">"Strong coupling of a single photon to a superconducting qubit using circuit quantum electrodynamics"</a>. <em>Nature</em>. <strong>431</strong> (7005): 162-167.</li>
+			<li>W. Wang, L. Hu, Y. Xu, K. Liu, Y. Ma, Shi-Biao Zheng, R. Vijay, Y. P. Song, L.-M. Duan and L. Sun (2017). <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.118.223604">"Converting quasiclassical states into arbitrary fock state superpositions in a superconducting circuit"</a>. <em>Physical Review Letters</em>. <strong>118</strong>: 223604.</li>
+			<li>W. Wang, Y. Wu, Y. Ma, W. Cai, L. Hu, X. Mu, Y. Xu, Zi-Jie Chen, H. Wang, Y. P. Song, H. Yuan, C.-L. Zou, L.-M. Duan and L. Sun (2019). <a href="https://www.nature.com/articles/s41467-019-12290-7">"Heisenberg-limited single-mode quantum metrology in a superconducting circuit"</a>. <em>Nature Communications</em>. <strong>10</strong> (1): 4382.</li>
 			<li>P. Campagne-Ibarcq and A. Eickbusch and S. Touzard and E. Zalys-Geller and N. E. Frattini and V. V. Sivak and P. Reinhold and S. Puri and S. Shankar and R. J. Schoelkopf and L. Frunzio and M. Mirrahimi and M. H. Devoret (2019). <a href="https://arxiv.org/abs/1907.12487">"Quantum error correction of a qubit encoded in grid states of an oscillator"</a>.</li>
 			<li>Yiwen Chu, Prashanta Kharel, Taekwan Yoon, Luigi Frunzio, Peter T. Rakich and Robert J. Schoelkopf (2018). <a href="https://www.nature.com/articles/s41586-018-0717-7">"Creation and control of multi-phonon fock states in a bulk acoustic-wave resonator"</a>. <em>Nature</em>. <strong>563</strong> (7733): 666-670.</li>
 			<li>D. Kienzler, H.-Y. Lo, B. Keitch, L. de Clercq, F. Leupold, F. Lindenfelser, M. Marinelli, V. Negnevitsky and J. P. Home (2015). <a href="https://science.sciencemag.org/content/347/6217/53">"Quantum harmonic oscillator state synthesis by reservoir engineering"</a>. <em>Science</em>. <strong>347</strong> (6217): 53-56.</li>
 			<li>C. Flühmann, V. Negnevitsky, M. Marinelli, and J.P. Home (2018). <a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.8.021001">"Sequential Modular Position and Momentum Measurements of a Trapped Ion Mechanical Oscillator"</a>. <em>Physical Review X</em>. <strong>8</strong>: 021001.</li>
 			<li>C. Flühmann, T. L. Nguyen, M. Marinelli, V. Negnevitsky, K. Mehta and J. P. Home (2019). <a href="https://www.nature.com/articles/s41586-019-0960-6">"Encoding a qubit in a trapped-ion mechanical oscillator"</a>. <em>Nature</em>. <strong>566</strong>: 513-517.</li>
 			<li>Fabian Wolf, Chunyan Shi, Jan C. Heip, Manuel Gessner, Luca Pezzè, Augusto Smerzi, Marius Schulte, Klemens Hammerer and Piet O. Schmidt (2019). <a href="https://www.nature.com/articles/s41467-019-10576-4">"Motional Fock states for quantum-enhanced amplitude and phase measurements with trapped ions"</a>. <em>Nature Communications</em>. <strong>10</strong>: 2929.</li>
-			<li>Katherine C. McCormick, Jonas Keller, Shaun C. Burd, David J. Wineland, Andrew C. Wilson, and Dietrich Leibfried (2019). "Quantum-enhanced sensing of a single-ion mechanical oscillator". <em>Nature</em>. <strong>572</strong> (7767): 86-90.</li>
-			<li>S. C. Burd, R. Srinivas, J. J. Bollinger, A. C. Wilson, D. J. Wineland, D. Leibfried, D. H. Slichter and D. T. C. Allcock (2019). "Quantum amplification of mechanical oscillator motion". <em>Science</em>. <strong>364</strong> (6446): 1163-1165.</li>
+			<li>Katherine C. McCormick, Jonas Keller, Shaun C. Burd, David J. Wineland, Andrew C. Wilson, and Dietrich Leibfried (2019). <a href="https://www.nature.com/articles/s41586-019-1421-y">"Quantum-enhanced sensing of a single-ion mechanical oscillator"</a>. <em>Nature</em>. <strong>572</strong> (7767): 86-90.</li>
+			<li>S. C. Burd, R. Srinivas, J. J. Bollinger, A. C. Wilson, D. J. Wineland, D. Leibfried, D. H. Slichter and D. T. C. Allcock (2019). <a href="https://science.sciencemag.org/content/364/6446/1163">"Quantum amplification of mechanical oscillator motion"</a>. <em>Science</em>. <strong>364</strong> (6446): 1163-1165.</li>
 			<li>Marlan O. Scully and M. Suhail Zubairy, <em>Quantum optics</em>, Cambridge university press, 1997.</li>
-			<li>P J Lee, K-A Brickman, L Deslauriers, P C Haljan, L-M Duan, and C Monroe (2005). "Phase control of trapped ion quantum gates". <em>Journal of Optics B: Quantum and Semiclassical Optics</em>. <strong>7</strong> (10): S371-S383.</li>
-			<li>A. I. Lvovsky and J. H. Shapiro (2002). "Nonclassical character of statistical mixtures of the single-photon and vacuum optical states". <em>Physical Review A</em>. <strong>65</strong>: 033830.</li>
-			<li>Alessandro Zavatta, Valentina Parigi and Marco Bellini (2007). "Experimental nonclassicality of single-photonadded thermal light states". <em>Physical Review A</em>. <strong>75</strong>: 052106.</li>
-			<li>Wenchao Ge, Brian C. Sawyer, Joseph W. Britton, Kurt Jacobs, John J. Bollinger, and Michael Foss-Feig (2019). "Trapped ion quantum information processing with squeezed phonons". <em>Physical Review Letters</em>. <strong>122</strong>: 030501.</li>
+			<li>P J Lee, K-A Brickman, L Deslauriers, P C Haljan, L-M Duan, and C Monroe (2005). <a href="https://iopscience.iop.org/article/10.1088/1464-4266/7/10/025/meta">"Phase control of trapped ion quantum gates"</a>. <em>Journal of Optics B: Quantum and Semiclassical Optics</em>. <strong>7</strong> (10): S371-S383.</li>
+			<li>A. I. Lvovsky and J. H. Shapiro (2002). <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.65.033830">"Nonclassical character of statistical mixtures of the single-photon and vacuum optical states"</a>. <em>Physical Review A</em>. <strong>65</strong>: 033830.</li>
+			<li>Alessandro Zavatta, Valentina Parigi and Marco Bellini (2007). <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.75.052106">"Experimental nonclassicality of single-photonadded thermal light states"</a>. <em>Physical Review A</em>. <strong>75</strong>: 052106.</li>
+			<li>Wenchao Ge, Brian C. Sawyer, Joseph W. Britton, Kurt Jacobs, John J. Bollinger, and Michael Foss-Feig (2019). <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.030501">"Trapped ion quantum information processing with squeezed phonons"</a>. <em>Physical Review Letters</em>. <strong>122</strong>: 030501.</li>
 			<li>L. Podhora and T. Pham and A. Lešundák and P. Obšil and M. Čížek and O. Číp and P. Marek and L. Slodička and R. Filip (2020). <a href="https://arxiv.org/abs/2004.12863">"Unconditional accumulation of nonclassicality in a single-atom mechanical oscillator"</a>.</li>
 			<li>An Shuoming, <em>Quantum Control in the trapped ion system</em>, PhD thesis, Tsinghua University, 2017.</li>
-			<li>Frank Verstraete, Michael M. Wolf, and J. Ignacio Cirac (2009). "Quantum computation and quantum-state engineering driven by dissipation". <em>Nature Physics</em>. <strong>5</strong> (9): 633-636.</li>
-			<li>Fernando Pastawski, Lucas Clemente, and Juan Ignacio Cirac (2011). "Quantum memories based on engineered dissipation". <em>Physical Review A</em>. <strong>83</strong>: 012304.</li>
+			<li>Frank Verstraete, Michael M. Wolf, and J. Ignacio Cirac (2009). <a href="https://www.nature.com/articles/nphys1342">"Quantum computation and quantum-state engineering driven by dissipation"</a>. <em>Nature Physics</em>. <strong>5</strong> (9): 633-636.</li>
+			<li>Fernando Pastawski, Lucas Clemente, and Juan Ignacio Cirac (2011). <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.83.012304">"Quantum memories based on engineered dissipation"</a>. <em>Physical Review A</em>. <strong>83</strong>: 012304.</li>
 			<li>Y. Lin, J. P. Gaebler, F. Reiter, T. R. Tan, R. Bowler, A. S. Sørensen, D. Leibfried, and D. J. Wineland (2013). <a href="https://www.nature.com/articles/nature12801/">"Dissipative production of a maximally entangled steady state of two quantum bits"</a>. <em>Nature</em>. <strong>504</strong>: 415-418.</li>
-			<li>Hanna Krauter, Christine A. Muschik, Kasper Jensen,WojciechWasilewski, Jonas M. Petersen, J. Ignacio Cirac, and Eugene S. Polzik (2011). "Entanglement generated by dissipation and steady state entanglement of two macroscopic objects". <em>Physical Review Letters</em>. <strong>107</strong>: 080503.</li>
+			<li>Hanna Krauter, Christine A. Muschik, Kasper Jensen,WojciechWasilewski, Jonas M. Petersen, J. Ignacio Cirac, and Eugene S. Polzik (2011). <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.080503">"Entanglement generated by dissipation and steady state entanglement of two macroscopic objects"</a>. <em>Physical Review Letters</em>. <strong>107</strong>: 080503.</li>
 			<li>B. Kraus and H. P. Büchler and S. Diehl and A. Kantian and A. Micheli and P. Zoller (2008). <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.78.042307">"Preparation of entangled states by quantum markov processes"</a>. <em>Physical Review A</em>. <strong>78</strong>: 042307.</li>
-			<li>Jaeyoon Cho, Sougato Bose and M. S. Kim (2011). "Optical pumping into many-body entanglement". <em>Physical Review Letters</em>. <strong>106</strong>: 020504.</li>
-			<li>S. Diehl, A. Micheli, A. Kantian, B. Kraus, H. P. Büchler and P. Zoller (2008). "Quantum states and phases in driven open quantum systems with cold atoms". <em>Nature Physics</em>. <strong>4</strong>: 878-883.</li>
-			<li>R. Blatt, J. I. Cirac, and P. Zoller (1995). "Trapping states of motion with cold ions". <em>Physical Review A</em>. <strong>52</strong>: 518-524.</li>
-			<li>J. F. Poyatos, J. I. Cirac, and P. Zoller (1996). "Quantum reservoir engineering with laser cooled trapped ions". <em>Physical Review Letters</em>. <strong>77</strong>: 4728-4731.</li>
+			<li>Jaeyoon Cho, Sougato Bose and M. S. Kim (2011). <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.106.020504">"Optical pumping into many-body entanglement"</a>. <em>Physical Review Letters</em>. <strong>106</strong>: 020504.</li>
+			<li>S. Diehl, A. Micheli, A. Kantian, B. Kraus, H. P. Büchler and P. Zoller (2008). <a href="https://www.nature.com/articles/nphys1073">"Quantum states and phases in driven open quantum systems with cold atoms"</a>. <em>Nature Physics</em>. <strong>4</strong>: 878-883.</li>
+			<li>R. Blatt, J. I. Cirac, and P. Zoller (1995). <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.220501">"Trapping states of motion with cold ions"</a>. <em>Physical Review A</em>. <strong>52</strong>: 518-524.</li>
+			<li>J. F. Poyatos, J. I. Cirac, and P. Zoller (1996). <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.77.4728">"Quantum reservoir engineering with laser cooled trapped ions"</a>. <em>Physical Review Letters</em>. <strong>77</strong>: 4728-4731.</li>
 			<li>Daniel Kienzler, <em>Quantum Harmonic Oscillator State Synthesis by Reservoir Engineering</em>, PhD thesis, Humboldt Universität zu Berlin, 2015.</li>
           </ol>
 		</div>
