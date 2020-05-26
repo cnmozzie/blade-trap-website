@@ -20,6 +20,7 @@
 		   In order to get the algebra \(\mathbf{L}(C)\), we take into account that <em>\(A_s\) and \(B_p\) act on \(C\) as the identity
            operator and thus should be identified with the identity</em>.</p>
 		<p>To be more particular, consider an operator of the form
+		   <div class="anchor" id="eq3"></div>
 		   $$Y\left(c, c^{*}\right) \stackrel{\text { def }}{=} \prod_{i \in c} \sigma_{i}^{z} \prod_{j \in c^{*}} \sigma_{j}^{x}\tag{3}$$
 		   where \(c\) is a 1-cycle with \(\mathbf{Z}_2\) coefficients, \(c^*\) is a 1-cycle on the dual lattice. 
 		   The operator \(Y\left(c, c^{*}\right)\) commutes with every stabilizer operator and thus maps the
@@ -40,11 +41,11 @@
         <p>This construction will be our starting point.</p>
 		<h3>A \(2\times3\) lattice example</h3>
 		<p>Instead of dealing with toric lattices, we consider a finite square lattice on the plane. 
-		   A new feature arising here is a boundary. Generally, the boundary can be of two types, see Fig. 1. 
+		   A new feature arising here is a boundary. Generally, the boundary can be of two types, see <a href="#fig1">Fig. 1</a>. 
 		   We will call them an x-boundary and a z-boundary.</p>
 	  </div>
 	  <div class="col-center-block">  
-        <embed src="planar_code/two_types_of_boundary.svg" width="300" height="200">
+        <embed src="planar_code/two_types_of_boundary.svg" width="300" height="200" id="fig1">
 	  </div>
       <div class="col-12">
         <figcaption class="figure-caption text-center"><strong>Figure 1:</strong> Square lattices with (a) z-boundary and (b) x-boundary.</figcaption>
@@ -52,20 +53,20 @@
 	  </div>
       <div class="col-12">
 		<p>The simplest example of a boundary code can be built on the lattice having two pieces of
-           x-boundary and two pieces of z-boundary, in alternating order (see Fig. 2). Under a suitable
+           x-boundary and two pieces of z-boundary, in alternating order (see <a href="#fig2">Fig. 2</a>). Under a suitable
            convention, an \(n\times m\) lattice has nm vertical edges and \((n+1)(m+1)\) horizontal edges, so the
            code has \(2nm+n+m+1\) qubits. The stabilizer operators are very similar to ones in the toric
            code. The definitions (1), (2) remain essentially the same, but we must specify what are the
            faces and the vertices. If a face p is such that all its boundary edges are present (e. g. the face
-           \(p_2\) in the Fig. 2) then the operator \(B_p\) is well defined by (1). There are also incomplete faces
-           lacking one edge, e. g. the face \(p_1\) in Fig. 2. We still assign a stabilizer operator to such a face
+           \(p_2\) in the <a href="#fig2">Fig. 2</a>) then the operator \(B_p\) is well defined by (1). There are also incomplete faces
+           lacking one edge, e. g. the face \(p_1\) in <a href="#fig2">Fig. 2</a>. We still assign a stabilizer operator to such a face
            according to (1), with boundary(p) containing all existing boundary edges of the face p. Thus
            there are \(n(m + 1)\) face stabilizer operators. Similarly, we assign \((n + 1)m\) stabilizer operators
            to all vertices with 4 or 3 incoming edges. (Free ends of edges do not bear stabilizer operators).
            All the stabilizer operators are independent.</p>
 	  </div>
 	  <div class="col-center-block">  
-        <embed src="planar_code/2x3_lattice_example.svg" width="450" height="315">
+        <embed src="planar_code/2x3_lattice_example.svg" width="450" height="315" id="fig2">
 	  </div>
       <div class="col-12">
         <figcaption class="figure-caption"><strong>Figure 2:</strong> A \(2\times3\) lattice with two pieces of x-boundary 
@@ -73,7 +74,7 @@
 	    <br>
 	  </div>
       <div class="col-12">
-		<p>Here is a complete list of stabilizer operators for the lattice shown in Fig. 2: 
+		<p>Here is a complete list of stabilizer operators for the lattice shown in <a href="#fig2">Fig. 2</a>: 
 		   \(A_{s_{1}}=\sigma_{v_{1} s_{1}}^{x} \sigma_{s_{1} s_{4}}^{x} \sigma_{s_{1} s_{2}}^{x}\), 
 		   \(A_{s_{2}}=\sigma_{s_{1} s_{2}}^{x} \sigma_{s_{2} s_{5}}^{x} \sigma_{s_{2} s_{3}}^{x}\), 
 		   \(A_{s_{3}}=\sigma_{s_{2} s_{3}}^{x} \sigma_{s_{3} s_{6}}^{x} \sigma_{s_{3} v_{2}}^{x}\), 
@@ -102,10 +103,10 @@
            boundaries which are, by definition, formed, by free ends of edges. (Recall that the free ends
            are exactly the vertices which do not bear stabilizer operators). Note that the x-boundary
            belongs to the lattice \(L\) while the z-boundary belongs to \(L^*\). From now on, we denote these
-           two boundaries by \(V\) and \(V^*\), correspondingly. In Fig. 2, \(V\) includes the free ends denoted by
+           two boundaries by \(V\) and \(V^*\), correspondingly. In <a href="#fig2">Fig. 2</a>, \(V\) includes the free ends denoted by
            \(V_1\) and \(V_2\), whereas \(V^*\) is represented by \(V^*_1\) and \(V^*_2\). (It does not matter whether we identify
            the free ends or consider them as distinct vertices).</p>
-		<p>A linear basis of \(\mathcal{G}\) is given by eq. (3), where \(c\) is a relative 1-cycle (with \(\mathbf{Z}_2\) coefficients)
+		<p>A linear basis of \(\mathcal{G}\) is given by <a href="#eq3">eq. (3)</a>, where \(c\) is a relative 1-cycle (with \(\mathbf{Z}_2\) coefficients)
            on the lattice \(L\), and \(c^*\) is a relative 1-cycle on the lattice \(L^*\). By definition, a <em>relative</em> 1-cycle
            on a lattice is a 1-chain \(c\) whose boundary \(\partial c\) is contained in the boundary of the lattice.
            Equivalently, a relative 1-cycle is an ordinary (or absolute) 1-cycle on a lattice obtained from
@@ -117,7 +118,7 @@
 		   Thus we arrive to the group \(E = H_1(L, V,\mathbf{Z}_2) \oplus H^1(L, V,\mathbf{Z}_2)\). The operators \(Y\left([c], [c^{*}]\right)\) 
 		   (where \(([c], [c^*]) \in E\)) form a linear basis of the algebra \(\mathbf{L}(C)\).</p>
 		<p>Consider some relative cycle \(c_{12}\) starting at \(V_1\) and ending at \(V_2\), and some relative cycle \(c_{12}^*\)
-           starting at \(V^*_1\) and ending at \(V^*_2\), see Fig. 3. The operators \(Y^z=Y([c_{12}],0)\) and \(Y^x=Y(0,[c^*_{12}])\) 
+           starting at \(V^*_1\) and ending at \(V^*_2\), see <a href="#fig3">Fig. 3</a>. The operators \(Y^z=Y([c_{12}],0)\) and \(Y^x=Y(0,[c^*_{12}])\) 
            generate the algebra of logical operators. Since these two generators anti-commute, we can
            interpret them as the action of \(\sigma_z\) and \(\sigma_x\) on the logical qubit.</p>	
 	    <p>Let us find the distance of the code we have constructed. By definition, the <strong>distance of a
@@ -131,7 +132,7 @@
            protects against \(\left[\frac{d-1}{2}\right]\) errors.</p>
 	  </div>
 	  <div class="col-center-block">  
-        <embed src="planar_code/homology_class.svg" width="240" height="240">
+        <embed src="planar_code/homology_class.svg" width="240" height="240" id="fig3">
 	  </div>
       <div class="col-12">
         <figcaption class="figure-caption text-left"><strong>Figure 3:</strong> The nontrivial relative homology class \([c_{12}] \in H_1(L, V,\mathbf{Z}_2)\)
@@ -151,7 +152,7 @@
            \([c] \in H_1(Q, V,\mathbf{Z}_2)\) and \([c^*] \in H_1(Q, V^*,\mathbf{Z}_2)=H^1(Q,V,\mathbf{Z}_2)\). 
 		   Hence the number of logical qubits is \(m = \text{dim}H_1(Q, V,\mathbf{Z}_2) = \text{dim}H_1(Q, V^*,\mathbf{Z}_2) \).</p>
         <p>Let us consider the case where the surface Q is a disk with k pieces of x-boundary (labeled as
-           \(V_i\)) and k pieces of z-boundary (labeled as \(V_i^*\)), see Fig. 4. Obviously, \(\text{dim}H_1(Q, V,\mathbf{Z}_2)=k-1\),
+           \(V_i\)) and k pieces of z-boundary (labeled as \(V_i^*\)), see <a href="#fig4">Fig. 4</a>. Obviously, \(\text{dim}H_1(Q, V,\mathbf{Z}_2)=k-1\),
            hence k−1 qubits can be encoded. A particular encoding can be specified if we select a basis of
            \(H_1(Q, V,\mathbf{Z}_2)\) and the dual basis of \(H^1(Q, V,\mathbf{Z}_2)\). For example, we can choose the operators
 		   $$Y_{i}^{z}=Y\left(\left[c_{i}\right], 0\right), Y_{i}^{x}=Y\left(0,\left[c_{i}^{*}\right]\right), i=1 \ldots k-1\tag{5}$$
@@ -159,7 +160,7 @@
 		   connects \(V_i\) with \(V_{i+1}\), whereas \(c^*_i\) connects \(V_i^*\) with \(V_k^*\)).</p>
 	  </div>
 	  <div class="col-center-block">  
-        <embed src="planar_code/non-square-lattice.svg" width="300" height="300">
+        <embed src="planar_code/non-square-lattice.svg" width="300" height="300" id="fig4">
 	  </div>
       <div class="col-12">
         <figcaption class="figure-caption text-left"><strong>Figure 4:</strong> A lattice with 4+4 pieces of boundary. 

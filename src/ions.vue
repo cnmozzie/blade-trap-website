@@ -6,7 +6,9 @@
 	   (first published on 2020/05/03).</p>
 	<p>[003]<router-link to="/blade-trap/ions/planar_code">Planar Code</router-link> by <a href="mailto:gwx18@mails.tsinghua.edu.cn">Mozzie</a>
 	   (first published on 2020/05/17).</p>
-    <router-view></router-view>
+    <p>[004]<router-link to="/blade-trap/ions/motional_state_engineering_with_trapped_ion">Motional State Engineering with Trapped Ion</router-link> by <a href="mailto:caiml16@mails.tsinghua.edu.cn">Maverick</a>
+	   (first published on 2020/05/26).</p>
+	<router-view></router-view>
   </div>
 </template>
 

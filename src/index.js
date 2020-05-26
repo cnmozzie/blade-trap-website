@@ -18,6 +18,7 @@ const Chat = () => import('./chat.vue')
 const ToricCode = () => import('./ions/toric_code.vue')
 const RemoteIonsEntanglement = () => import('./ions/remote_ions_entanglement.vue')
 const PlanarCode = () => import('./ions/planar_code.vue')
+const MotionalStateEngineering = () => import('./ions/motional_state_engineering_with_trapped_ion.vue')
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -66,6 +67,10 @@ const routes = [
 		{
           path: 'planar_code',
           component: PlanarCode
+        },
+		{
+          path: 'motional_state_engineering_with_trapped_ion',
+          component: MotionalStateEngineering
         }
       ]
   },

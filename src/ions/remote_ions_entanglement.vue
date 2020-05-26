@@ -187,7 +187,7 @@
 			<li>L.-M. Duan, M. J. Madsen, D. L. Moehring, P. Maunz, R. N. Kohn, and C. Monroe (2006). "Probabilistic quantum gates between remote atoms through interference of optical frequency qubits". <em>Physical Review A</em>. <strong>73</strong>: 062324.</li>
 			<li>P. Maunz, S. Olmschenk, D. Hayes, D. N. Matsukevich, L.-M. Duan, and C. Monroe. (2009). "Heralded quantum gate between remote quantum memories". <em>Physical Review Letters</em>. <strong>102</strong>: 250502.</li>
 			<li>T. P. Harty, D. T. C. Allcock, C. J. Ballance, L. Guidoni, H. A. Janacek, N. M. Linke, D. N. Stacey, and D. M. Lucas (2014). "High-fidelity preparation, gates, memory, and readout of a trapped-ion quantum bit". <em>Physical Review Letters</em>. <strong>113</strong>: 220501.</li>
-			<li>L. J. Stephenson, D. P. Nadlinger, B. C. Nichol, S. An, P. Drmota, T. G. Ballance, K. Thirumalai, J. F. Goodwin, D. M. Lucas, and C. J. Ballance 2020). "High-rate, high-hidelity entanglement of qubits across an elementary quantum network". <em>Physical Review Letters</em>. <strong>124</strong>: 110501.</li>
+			<li>L. J. Stephenson, D. P. Nadlinger, B. C. Nichol, S. An, P. Drmota, T. G. Ballance, K. Thirumalai, J. F. Goodwin, D. M. Lucas, and C. J. Ballance (2020). "High-rate, high-hidelity entanglement of qubits across an elementary quantum network". <em>Physical Review Letters</em>. <strong>124</strong>: 110501.</li>
 			<li>Robert Raussendorf and Hans J. Briegel (2001). "A one-way quantum computer". <em>Physical Review Letters</em>. <strong>86</strong>: 5188-5191.</li>
           </ol>
 		</div>
