@@ -19,6 +19,7 @@ const ToricCode = () => import('./ions/toric_code.vue')
 const RemoteIonsEntanglement = () => import('./ions/remote_ions_entanglement.vue')
 const PlanarCode = () => import('./ions/planar_code.vue')
 const MotionalStateEngineering = () => import('./ions/motional_state_engineering_with_trapped_ion.vue')
+const LindbladMasterEquation = () => import('./ions/lindblad_master_equation.vue')
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -71,6 +72,10 @@ const routes = [
 		{
           path: 'motional_state_engineering_with_trapped_ion',
           component: MotionalStateEngineering
+        },
+		{
+          path: 'lindblad_master_equation',
+          component: LindbladMasterEquation
         }
       ]
   },

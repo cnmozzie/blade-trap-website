@@ -8,6 +8,8 @@
 	   (first published on 2020/05/17).</p>
     <p>[004]<router-link to="/blade-trap/ions/motional_state_engineering_with_trapped_ion">Motional State Engineering with Trapped Ion</router-link> by <a href="mailto:caiml16@mails.tsinghua.edu.cn">Maverick</a>
 	   (first published on 2020/05/26).</p>
+	<p>[005]<router-link to="/blade-trap/ions/lindblad_master_equation">Lindblad Master Equation</router-link> by <a href="mailto:gwx18@mails.tsinghua.edu.cn">Mozzie</a>
+	   (first published on 2020/05/30).</p>
 	<router-view></router-view>
   </div>
 </template>
