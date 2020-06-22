@@ -42,12 +42,13 @@
            &=|a|^{2}\left\langle 0\left|M_{A}\right| 0\right\rangle+|b|^{2}\left\langle 1\left|M_{A}\right| 1\right\rangle.
            \end{aligned}$$
 		   This expression can be rewritten in the form 
+		   <div class="anchor" id="eq1"></div>
 		   $$\left\langle M_{A}\right\rangle=\text{tr}(M_A\rho_A),\tag{1}$$
 		   where \(\rho_{\mathrm{A}}=|a|^{2}|0\rangle\langle0|+| b|^{2} | 1\rangle\langle 1|\) 
 		   and \(\text{tr}(\cdot)\) denotes the <em>trace</em>. The operator \(\rho_A\) is called the <strong>density operator</strong>
            (or <strong>density matrix</strong>) for qubit A. It is self-adjoint, positive (its eigenvalues
            are nonnegative) and it has unit trace (because \(|\psi\rangle\) is a normalized state).</p>
-		<p>Because \(\left\langle M_{A}\right\rangle\) has the form eq.(1) for any observable \(M_A\) acting
+		<p>Because \(\left\langle M_{A}\right\rangle\) has the form <a href="#eq1">eq.(1)</a> for any observable \(M_A\) acting
            on qubit A, it is consistent to interpret \(\rho_A\) as representing an <em>ensemble</em> of
            possible quantum states, each occurring with a specified probability. That
            is, we would obtain precisely the same result for \(\left\langle M_{A}\right\rangle\) if we stipulated
@@ -82,13 +83,14 @@
            &=\sum_{i, j, \mu} a_{j \mu}^{*} a_{i \mu}\left\langle j\left|M_{A}\right| i\right\rangle \\
 		   &=\sum_{k}\sum_{i, j, \mu} a_{j \mu}^{*} a_{i \mu}\left\langle j\left|k\rangle\langle k|M_{A}\right| i\right\rangle \\
 		   &=\sum_{k}\sum_{i, j, \mu} a_{j \mu}^{*} a_{i \mu}\langle k|M_{A}| i \rangle \langle j |k\rangle=\operatorname{tr}\left(M_{A} \rho_{A}\right),
-           \end{aligned}$$
-		   where $$\rho_{A}=\operatorname{tr}_{B}(|\psi\rangle\langle\psi|) \equiv \sum_{i, j, \mu} a_{i \mu} a_{j \mu}^{*}|i\rangle\langle j|\tag{2}$$
+           \end{aligned}$$ where 
+		   <div class="anchor" id="eq1"></div>
+		   $$\rho_{A}=\operatorname{tr}_{B}(|\psi\rangle\langle\psi|) \equiv \sum_{i, j, \mu} a_{i \mu} a_{j \mu}^{*}|i\rangle\langle j|\tag{2}$$
 		   is the density operator of subsystem A.</p>
 		<p>We may say that the density operator \(\rho_A\) for subsystem A is obtained
            by performing a <em>partial trace</em> over subsystem B of the density operator
           (in this case a pure state) for the combined system AB.</p>
-		<p>From the definition eq.(2), we can immediately infer that \(\rho_A\) has the following properties:
+		<p>From the definition <a href="#eq2">eq.(2)</a>, we can immediately infer that \(\rho_A\) has the following properties:
 		   <ol>
              <li>\(\rho_A\) is self-adjoint: \(\rho_A=\rho_A^\dagger\).</li>
              <li>\(\rho_A\) is positive: For any \(|\psi\rangle\), \(\langle\varphi|\rho_{A}| \varphi\rangle=\sum_{\mu}|\sum_{i} a_{i \mu}\langle\varphi | i\rangle|^{2} \geq 0\).</li>
@@ -147,7 +149,8 @@
            description of such "generalized measurements" on system S.</p>
 		<p>Suppose, to be concrete, that the system A is a single qubit, and so is
            the pointer B. They interact, resulting in the unitary map
-		   $$U:(\alpha|0\rangle+\beta|1\rangle)_{A} \otimes|0\rangle_{B} \mapsto \alpha|0\rangle_{A} \otimes|0\rangle_{B}+\beta|1\rangle_{A} \otimes|1\rangle_{B}.$$
+		   <div class="anchor" id="eq3"></div>
+		   $$U:(\alpha|0\rangle+\beta|1\rangle)_{A} \otimes|0\rangle_{B} \mapsto \alpha|0\rangle_{A} \otimes|0\rangle_{B}+\beta|1\rangle_{A} \otimes|1\rangle_{B}.\tag{3}$$
 		   Measuring the pointer by projecting onto the basis \(\{|0\rangle,|1\rangle\}\) would induce
            an orthogonal measurement of the system, also in the \(\{|0\rangle,|1\rangle\}\) basis. But
            suppose that we measure the pointer in a different basis instead, such as
@@ -161,7 +164,7 @@
            this one, which is not necessarily an orthogonal projection acting on the system.</p>
 		<p>It is convenient to describe this measurement procedure by expanding
            the entangled state of system and pointer in the basis in which the pointer
-           is measured; hence we rewrite eq.(3.19) as
+           is measured; hence we rewrite <a href="#eq3">eq.(3)</a> as
 		   $$U:|\psi\rangle_{A} \otimes|0\rangle_{B} \mapsto M_{+}|\psi\rangle_{A} \otimes|+\rangle_{B}+M_{-}|\psi\rangle_{A} \otimes|-\rangle_{B},$$
 		   where \(M_{+}=\frac{1}{\sqrt{2}}\left(\begin{array}{cc}
            1 & 0 \\
@@ -178,23 +181,27 @@
            that the system A and pointer B are initially in a product state, then
            an entangling unitary transformation \(U\) correlates the system with the
            pointer. By expanding the action of \(U\) in the basis for B we obtain
-		   $$U:|\psi\rangle_{A} \otimes|0\rangle_{B} \mapsto \sum_{a} M_{a}|\psi\rangle_{A} \otimes|a\rangle_{B}.\tag{3}$$
+		   <div class="anchor" id="eq4"></div>
+		   $$U:|\psi\rangle_{A} \otimes|0\rangle_{B} \mapsto \sum_{a} M_{a}|\psi\rangle_{A} \otimes|a\rangle_{B}.\tag{4}$$
 		   Since \(U\) is unitary, it preserves the norm of any input, which means that
 		   \(1=\| \sum_{a} M_{a}|\psi\rangle \otimes|a\rangle \|^{2}=\sum_{a, b}\left\langle\psi\left|M_{a}^{\dagger} M_{b}\right| \psi\right\rangle\langle a | b\rangle=\sum_{a}\left\langle\psi\left|M_{a}^{\dagger} M_{a}\right| \psi\right\rangle\) 
 		   for any \(|\psi\rangle\); hence
-		   $$\sum_{a} M_{a}^{\dagger} M_{a}=I.\tag{4}$$</p>
+		   <div class="anchor" id="eq5"></div>
+		   $$\sum_{a} M_{a}^{\dagger} M_{a}=I.\tag{5}$$</p>
 		<p>The complete orthogonal measurement projecting onto the pointer basis
            \(\{|a\rangle_B\}\) is equivalent to the incomplete orthogonal measurement on
            AB with projectors \(\{\boldsymbol{I} \otimes|a\rangle\langle a|\}\); the measurement postulate asserts that
            outcome a occurs with probability
-		   $$\operatorname{Prob}(a)=\| M_{a}|\psi\rangle \|^{2},\tag{5}$$
+		   <div class="anchor" id="eq6"></div>
+		   $$\operatorname{Prob}(a)=\| M_{a}|\psi\rangle \|^{2},\tag{6}$$
 		   and that if outcome a occurs the post-measurement state of the system is
-		   $$\frac{M_{a}|\psi\rangle}{\| M_{a}|\psi\rangle \|}.$$</p>
+		   <div class="anchor" id="eq7"></div>
+		   $$\frac{M_{a}|\psi\rangle}{\| M_{a}|\psi\rangle \|}.\tag{7}$$</p>
 		<p>We see that if the initial state of the system is the density operator
            \(\rho\) (realized as an ensemble of pure states), there is an operator \(E_a=M_a^\dagger M_a\) 
 		   associated with each possible measurement outcome a, such that
            the probability of outcome a is
-		   $$\operatorname{Prob}(a)=\operatorname{tr}\left(\rho E_{a}\right).\tag{6}$$
+		   $$\operatorname{Prob}(a)=\operatorname{tr}\left(\rho E_{a}\right).$$
 		   The measurement operators \(\{E_a\}\) form a complete set of Hermitian nonnegative
            operators; that is, they satisfy the properties:
 		   <ol>
@@ -214,16 +221,17 @@
 		<p>In effect, we have already answered this question in our discussion of
            generalized measurements. If system A starts out in a pure state \(|\psi\rangle\)
            (<em>unentangled</em> with B), and then interacts with B, the joint state of AB has
-           the form eq.(3), the resulting density operator for A is found by tracing
+           the form <a href="#eq4">eq.(4)</a>, the resulting density operator for A is found by tracing
            out B. Equivalently, we may imagine measuring system B in the basis
            \(\{|a\rangle\}\), but failing to record the measurement outcome, so we are forced to
-           average over all the possible post-measurement states (6), weighted by their
-           probabilities (5). The result is that the initial density operator \(\rho=|\psi\rangle\langle\psi|\) is
+           average over all the possible post-measurement states <a href="#eq7">(7)</a>, weighted by their
+           probabilities <a href="#eq6">(6)</a>. The result is that the initial density operator \(\rho=|\psi\rangle\langle\psi|\) is
            subjected to a linear map \(\mathcal{E}\), which acts as
-		   $$\mathcal{E}(\rho)=\sum_{a} M_{a} \rho M_{a}^{\dagger},\tag{7}$$
-		   where the operators \(\{M_a\}\) obey the completeness relation eq.(4). Being
-           linear, \(\mathcal{E}\) acts as in eq.(7) not just on pure states, but on any density operator.</p>
-		<p>A linear map of the form eq.(7), where the \(\{M_a\}\) obey eq.(4), is
+		   <div class="anchor" id="eq8"></div>
+		   $$\mathcal{E}(\rho)=\sum_{a} M_{a} \rho M_{a}^{\dagger},\tag{8}$$
+		   where the operators \(\{M_a\}\) obey the completeness relation <a href="#eq5">eq.(5)</a>. Being
+           linear, \(\mathcal{E}\) acts as in <a href="#eq8">eq.(8)</a> not just on pure states, but on any density operator.</p>
+		<p>A linear map of the form <a href="#eq8">eq.(8)</a>, where the \(\{M_a\}\) obey <a href="#eq5">eq.(5)</a>, is
            called a <strong>quantum channel</strong>. The word "channel" is drawn from communication
            theory —— we are to imagine a sender who transmits the state \(\rho\)
            though a communication link to another party who receives the modified
@@ -231,7 +239,7 @@
            quantum channel, where "super" conveys that the map takes operators
            to operators rather than vectors to vectors. Yet another name for the
            same object is <strong>trace-preserving completely positive map</strong>, or <strong>TPCP</strong> map
-           for short. The justification for this name will emerge shortly. Eq.(7)
+           for short. The justification for this name will emerge shortly. <a href="#eq8">Eq.(8)</a>
            is said to be an <strong>operator-sum representation</strong> of the quantum channel, and
            the operators \(\{M_a\}\) are called the <strong>Kraus operators</strong> or <em>operation elements</em> of the channel.</p>
 		<p>A quantum channel maps density operators to density operators; that
@@ -281,7 +289,7 @@
            realized this way. Given a quantum channel \(\mathcal{E}\) acting on A with Kraus
            operators \(\{M_a\}\), we may introduce the auxiliary system B with Hilbert
            space dimension matching the number of Kraus operators. A unitary
-           transformation may then be constructed whose action on \(|\psi\rangle_A\otimes|0\rangle_B\) is as in eq.(3), 
+           transformation may then be constructed whose action on \(|\psi\rangle_A\otimes|0\rangle_B\) is as in <a href="#eq4">eq.(4)</a>, 
 		   from which the quantum channel \(\mathcal{E}\) is obtained by tracing out B.</p>
 		<p>If we wish we may imagine that the channel \(\mathcal{E}\) describes the fate of quantum
            information that is transmitted with some loss of fidelity from a sender
@@ -304,13 +312,14 @@
            in its vacuum state, then no transition occurs.)</p>
 		<p><strong>Kraus operators.</strong> By evaluating the partial trace over the environment in
            the basis \(\{|0\rangle_{E},|1\rangle_{E}\}\), we find the Kraus operators
+		   <div class="anchor" id="eq9"></div>
 		   $$M_{0}=\left(\begin{array}{cc}
            1 & 0 \\
            0 & \sqrt{1-p}
            \end{array}\right), \quad M_{1}=\left(\begin{array}{cc}
            0 & \sqrt{p} \\
            0 & 0
-           \end{array}\right)\tag{8}$$ and we can check that
+           \end{array}\right)\tag{9}$$ and we can check that
 		   \(M_{0}^{\dagger} M_{0}+M_{1}^{\dagger} M_{1}=\left(\begin{array}{cc}
            1 & 0 \\
            0 & 1-p
@@ -407,23 +416,25 @@
 		   where the linear map \(\mathcal{L}\) generating time evolution is called the <em>Liouvillian</em>
            or <em>Lindbladian</em>.</p>
 		<p>The channel has an operator-sum representation
-		   $$\rho(t+d t)=\mathcal{E}_{d t}(\rho(t))=\sum_{a} M_{a} \rho(t) M_{a}^{\dagger}=\rho(t)+O(d t),\tag{9}$$ 
+		   <div class="anchor" id="eq10"></div>
+		   $$\rho(t+d t)=\mathcal{E}_{d t}(\rho(t))=\sum_{a} M_{a} \rho(t) M_{a}^{\dagger}=\rho(t)+O(d t),\tag{10}$$ 
 		   where, if we retain only terms up to linear order in \(dt\), we may assume
            without loss of generality that \(M_0=I+O(dt)\), and that \(M_a\) is of
            order \(\sqrt{dt}\) for \(a>0\). Each of the Kraus operators \(M_{1,2,\cdots}\) describes a
            possible "quantum jump" that the system might undergo, which occurs
            during time interval \(dt\) with probability \(O(dt)\), and \(M_0\) describes how the
            system evolves when no jump occurs. We may write
+		   <div class="anchor" id="eq11"></div>
 		   $$\begin{array}{l}
            M_{0}=I+(-i H+K) d t, \\
            M_{a}=\sqrt{d t} L_{a}, \quad a=1,2,\cdots,
-           \end{array}\tag{10}$$
+           \end{array}\tag{11}$$
 		   where \(H\) and \(K\) are both hermitian and \(L_a\), \(H\), and \(K\) are all zeroth
            order in \(dt\). In fact, we can determine \(K\) by invoking the Kraus-operator
            completeness relation; keeping terms up to linear order in \(O(dt)\), we find
 		   $$I=\sum_{\mu} M_{a}^{\dagger} M_{a}=I+d t\left(2 K+\sum_{\mu>0} L_{a}^{\dagger} L_{a}\right)+\cdots,$$
 		   or $$K=-\frac{1}{2} \sum_{a>0} L_{a}^{\dagger} L_{a}.$$</p>
-		<p>Substituting into eq. (9), we obtain the <strong>Lindblad master equation</strong>:
+		<p>Substituting into <a href="#eq10">eq.(10)</a>, we obtain the <strong>Lindblad master equation</strong>:
 		   $$\dot{\rho}=\mathcal{L}(\rho)=-i[H, \rho]+\sum_{a>0}\left(L_{a} \rho L_{a}^{\dagger}-\frac{1}{2} L_{a}^{\dagger} L_{a} \rho-\frac{1}{2} \rho L_{a}^{\dagger} L_{a}\right).$$
 		   This is the general Markovian evolution law for quantum states in the
            Schrödinger picture, assuming time evolution is a trace-preserving completely
@@ -437,10 +448,10 @@
 		
 		<h3>Spontaneous emission of a two-level atom</h3>
         <p>If we are able to identify which quantum jumps may affect the state of A, we can
-           infer the jump operators \(L_a\) (within numerical factors) by eq. (10) and hence guess the structure
+           infer the jump operators \(L_a\) (within numerical factors) by <a href="#eq11">eq.(11)</a> and hence guess the structure
            of the Lindblad master equation. Let's revisit the amplitude-damping channel and find time dependence 
 		   of the spontaneous decay by the aid of the master equation.</p>
-        <p>From eq. (8) we can find there is only one jump operator, proportional to the lowering operator 
+        <p>From <a href="#eq9">eq.(9)</a> we can find there is only one jump operator, proportional to the lowering operator 
 		   \(\sigma_-=|0\rangle\langle1|\): \(L_1=\sqrt{\Gamma}\sigma_-\) and the master equation is:
 		   $$\frac{d \rho_{A}}{d t}=-i \frac{\omega}{2}\left[\sigma_{z}, \rho_{A}\right]-\frac{\Gamma}{2}\left(\sigma_{+} \sigma_{-} \rho_{A}+\rho_{A} \sigma_{+} \sigma_{-}-2 \sigma_{-} \rho_{A} \sigma_{+}\right).$$
 		   To make it more expicit, let us express it in terms of the atomic populations (\(\rho_{00}\), \(\rho_{11}\)) and 

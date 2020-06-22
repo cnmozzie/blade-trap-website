@@ -20,6 +20,7 @@ const RemoteIonsEntanglement = () => import('./ions/remote_ions_entanglement.vue
 const PlanarCode = () => import('./ions/planar_code.vue')
 const MotionalStateEngineering = () => import('./ions/motional_state_engineering_with_trapped_ion.vue')
 const LindbladMasterEquation = () => import('./ions/lindblad_master_equation.vue')
+const QC_C = () => import('./ions/measurement-based_quantum_computation_on_cluster_states.vue')
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -76,6 +77,10 @@ const routes = [
 		{
           path: 'lindblad_master_equation',
           component: LindbladMasterEquation
+        },
+		{
+          path: 'measurement-based_quantum_computation_on_cluster_states',
+          component: QC_C
         }
       ]
   },

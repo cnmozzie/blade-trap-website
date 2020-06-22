@@ -2,7 +2,7 @@
   <div v-katex:auto class="container-fluid">
     <div class="row">
 	  <div class="col-12">
-	    <h1>Toric code</h1>
+	    <h1>Toric Code</h1>
         <p>To understand the Toric code, it is instructive to first understand the idea behind
            error correcting codes and their generalization to stabilizer codes, since the Toric code is an
            example of each of these objects.</p>
@@ -169,7 +169,7 @@
 	  </div>
       <div class="col-12">
         <figcaption class="figure-caption text-left"><strong>Figure 3:</strong> A example of a lattice (a) and its dual-lattice (b).
-          \(Z\) operator on a qubit (blue color) will excite a pair of e-anyon while \(X\) operator on a qubit (red color) will excite a pair of m-anyon.</figcaption>
+          \(Z\) operator on a qubit (red color) will excite a pair of e-anyon while \(X\) operator on a qubit (blue color) will excite a pair of m-anyon.</figcaption>
 	    <br />
 	  </div>
       <div class="col-12">

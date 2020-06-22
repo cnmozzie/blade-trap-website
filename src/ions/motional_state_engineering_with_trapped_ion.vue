@@ -85,6 +85,7 @@
            &=\omega_z(\hat{a}^\dagger\hat{a}+\frac{1}{2})-\frac{e E_0z_{0}}{2} \left(e^{-i(\omega t+\phi)}+e^{i(\omega t+\phi)}\right)\left(\hat{a}+\hat{a}^{\dagger}\right).
            \end{aligned}\tag{2}$$
 		   Using BCH formula again, the time-dependent term \(\hat{H}_1\) under interaction picture become
+		   <div class="anchor" id="equation3"></div>
 		   $$\begin{aligned}
            \hat{H}_{1,I} &= e^{i\hat{H}_0t}\hat{H}_1e^{-i\hat{H}_0t} \\
            &=-\frac{e E_0z_{0}}{2} \left(e^{-i(\omega t+\phi)}+e^{i(\omega t+\phi)}\right)\left(\hat{a}e^{-i\omega_zt}+\hat{a}^{\dagger}e^{i\omega_zt}\right) \\
@@ -106,13 +107,13 @@
            driving, by Raman laser beams with differential frequency equal to twice the motional frequency,
            or by a nonadiabatic drop in the trap spring constant [6]. The most common-used are the first
            two methods. For the parametric driving, we add an oscillating field at twice the motional
-           frequency to, say, the axial electrodes as shown in Fig. 1 (where we adopt a blade trap as an
+           frequency to, say, the axial electrodes as shown in <a href="#fig1">Fig. 1</a> (where we adopt a blade trap as an
            example). Hence the trapping potential along Z direction is [1]:
 		   $$\Phi=\frac{\gamma z^2}{2}(V+\tilde{V}\cos(2\omega_zt+\phi)),\tag{4}$$
 		   where \(V\) is the static voltage, \(\tilde{V}\) is the oscillating voltage and \(\gamma\) is a geometric parameter. With
            \(\hat{z}=z_0(\hat{a}+\hat{a}^\dagger)\), we get the Hamiltonian under the parametric driving field as:
 		   $$\hat{H}=\omega\left(\hat{a}^{\dagger} \hat{a}+\frac{1}{2}\right)+\frac{e \tilde{V} \gamma z_{0}^{2}}{2} \cos \left(2 \omega_{z} t+\phi\right)\left(\hat{a}+\hat{a}^{\dagger}\right)^{2}.\tag{5}$$
-		   By analogy with equation (3), the time-dependent term under interaction picture become:
+		   By analogy with <a href="#equation3">equation 3</a>, the time-dependent term under interaction picture become:
 		   $$\hat{H}_{1,I}=\frac{g}{2}\left(\hat{a}^2 e^{i \phi}+\hat{a}^{\dagger 2} e^{-i \phi}\right),\tag{6}$$
 		   where \(g=e\tilde{V}\gamma z_0^2/2\). Hence, the squeezing operator \(\hat{S}(\xi)\) is just the evolution operator of the Hamiltonian above and the
            squeezing parameter is \(\xi=ige^{-i\phi}/2t\). For the optical method, the two Raman laser beams with
@@ -120,7 +121,7 @@
            operation, a detailed derivation of the Hamiltonian can be also refered to Ref. [29].</p>
 	  </div>
 	  <div class="col-center-block">  
-        <embed src="motional_state_engineering/blade.svg">
+        <embed src="motional_state_engineering/blade.svg" id="fig1">
 	  </div>
       <div class="col-12">
         <figcaption class="figure-caption text-left"><strong>Figure 1: A linear Paul trap with a parametric driving field along Z-axis.</strong>  
@@ -150,6 +151,7 @@
 		   \(\hat{L}=\sqrt{\Gamma}\hat{\sigma}_-\).
 		   The time evolution of the ion’s state \(\hat{\rho}\) ion under the action of the spin-motion
            Hamiltonian and the dissipation is described by a Master equation in Lindblad form as
+		   <div class="anchor" id="equation7"></div>
 		   $$\frac{\mathrm{d} \hat{\rho}}{\mathrm{d} t}=-i[\hat{H}, \hat{\rho}]+\hat{L} \hat{\rho} \hat{L}^{\dagger}-\frac{1}{2}\left\{\hat{L}^{\dagger} \hat{L}, \hat{\rho}\right\}.\tag{7}$$
 		   The first term on the right-hand side describes the unitary evolution of the
            system and is, together with the left-hand side, similar to the <em>von Neumann equation</em>.
@@ -157,20 +159,24 @@
            <em>Dissipator \(\mathcal{D}(\hat{\rho})\)</em> or <em>Lindblad superoperator</em> describing the non-unitary evolution
            of the system, with quantum jumps from the upper to the lower spin state 
 		   \(\left|\uparrow\right\rangle\left\langle\uparrow\right|\rightarrow\left| \downarrow\right\rangle\left\langle\downarrow\right|\) at a rate \(\Gamma\).</p>
-		<p>Equation 7 may be simplified to describe the experimental situation more
+		<p><a href="#equation7">Equation 7</a> may be simplified to describe the experimental situation more
            efficiently by restricting the discussion to the regime where the dissipation is
            much stronger than the coherent driving: \(\Omega\ll\Gamma\). Introducing the partial
            matrix elements (motional parts of the density matrix) \(\hat{\rho}_{i j}=\left\langle i\left|\hat{\rho}_{\text {ion }}\right| j\right\rangle\) 
 		   with \(\{i, j\} \in\{\uparrow, \downarrow\}\), the full density matrix is re-written as
 		   $$\hat{\rho}_{\text {ion }}=\hat{\rho}_{\downarrow \downarrow}\left|\downarrow\right\rangle\left\langle\downarrow\right|+\hat{\rho}_{\downarrow \uparrow}\left|\downarrow\right\rangle\left\langle\uparrow\right|+\hat{\rho}_{\uparrow \downarrow}\left|\uparrow\right\rangle\left\langle\downarrow\right|+\hat{\rho}_{\uparrow \uparrow}\left|\uparrow\right\rangle\left\langle\uparrow\right|,\tag{8}$$
 		   where here and from now on the tensor product symbol \(\otimes\) is omitted for simplicity.
-           Inserted into the Master equation 7 four coupled differential equations for motional desity operators can be found:
+           Inserted into the Master <a href="#equation7">equation 7</a> four coupled differential equations for motional desity operators can be found:
+		   <div class="anchor" id="equation9"></div>
            $$\frac{\mathrm{d} \hat{\rho}_{\downarrow \downarrow}}{\mathrm{d} t} =-i \Omega\left(\hat{K}^{\dagger} \hat{\rho}_{\uparrow \downarrow}-\hat{\rho}_{\downarrow \uparrow} \hat{K}\right)+\Gamma \hat{\rho}_{\uparrow \uparrow},\tag{9}$$
+		   <div class="anchor" id="equation10"></div>
            $$\frac{\mathrm{d} \hat{\rho}_{\uparrow \uparrow}}{\mathrm{d} t} =-i \Omega\left(\hat{K} \hat{\rho}_{\downarrow \uparrow}-\hat{\rho}_{\uparrow \downarrow} \hat{K}^{\dagger}\right)-\Gamma \hat{\rho}_{\uparrow \uparrow},\tag{10}$$
+		   <div class="anchor" id="equation11"></div>
            $$\frac{\mathrm{d} \hat{\rho}_{\uparrow \downarrow}}{\mathrm{d} t} =-i \Omega\left(\hat{K} \hat{\rho}_{\downarrow \downarrow}-\hat{\rho}_{\uparrow \uparrow} \hat{K}\right)-\frac{\Gamma}{2} \hat{\rho}_{\uparrow \downarrow},\tag{11}$$
+		   <div class="anchor" id="equation12"></div>
            $$\frac{\mathrm{d} \hat{\rho}_{\downarrow \uparrow}}{\mathrm{d} t} =-i \Omega\left(\hat{K}^{\dagger} \hat{\rho}_{\uparrow \uparrow}-\hat{\rho}_{\downarrow \downarrow} \hat{K}^{\dagger}\right)-\frac{\Gamma}{2} \hat{\rho}_{\downarrow \uparrow}.\tag{12}$$
            We assume the system initially in the lower spin state \(\hat{\rho}(t=0)=\hat{\rho}_{\downarrow \downarrow}\left|\downarrow\right\rangle\left\langle\downarrow\right|\), 
-		   which can be achieved by optical pumping experimentally. With this and the initial statement \(\Omega\ll\Gamma\), let's try to solve equation 11.
+		   which can be achieved by optical pumping experimentally. With this and the initial statement \(\Omega\ll\Gamma\), let's try to solve <a href="#equation11">equation 11</a>.
 		   First, we introduce an integrating factor and rearrange the terms:
 		   $$e^{\Gamma t / 2} \frac{\mathrm{d} \hat{\rho}_{\uparrow \downarrow}}{\mathrm{d} t}+\frac{\Gamma}{2} e^{\Gamma t / 2} \hat{\rho}_{\uparrow \downarrow}=-i e^{\Gamma t / 2} \Omega\left(\hat{K} \hat{\rho}_{\downarrow \downarrow}-\hat{\rho}_{\uparrow \uparrow} \hat{K}\right). \tag{13}$$
 		   Then we integrate the equation in t:
@@ -182,17 +188,17 @@
            \end{aligned}\tag{15}$$
 		   The second term on the right side will be neglected as it turns out by integrating
            once more to have an additional factor of \(1/\gamma\) and thus will be small.
-           Following these steps for all three differential equations 10, 11 and 12 we retrieve
+           Following these steps for all three differential <a href="#equation10">equations 10</a>, <a href="#equation11">11</a> and <a href="#equation12">12</a> we retrieve
 		   $$\begin{aligned}
            \hat{\rho}_{\uparrow \downarrow}(t) & \simeq-i \frac{2 \Omega}{\Gamma}\left[\left(\hat{K} \hat{\rho}_{\downarrow \downarrow}(t)-\hat{\rho}_{\uparrow \uparrow}(t) \hat{K}\right)-e^{-\Gamma t / 2} \hat{K}\right], \\
            \hat{\rho}_{\downarrow \uparrow}(t) & \simeq-i \frac{2 \Omega}{\Gamma}\left[\left(\hat{K}^{\dagger} \hat{\rho}_{\uparrow \uparrow}(t)-\hat{\rho}_{\downarrow \downarrow}(t) \hat{K}^{\dagger}\right)+e^{-\Gamma t / 2} \hat{K}^{\dagger}\right], \\
            \hat{\rho}_{\uparrow \uparrow}(t) & \simeq-i \frac{\Omega}{\Gamma}\left(\hat{K} \hat{\rho}_{\downarrow \uparrow}(t)-\hat{\rho}_{\uparrow \downarrow}(t) \hat{K}^{\dagger}\right).
            \end{aligned}\tag{16}$$
 		   The terms proportional to \(e^{-\Gamma t / 2}\) can be neglected as \(t\gg1/\Gamma\) for the
-           time of interest. Inserting these results in equation 9 and neglecting \(\hat{\rho}_{\uparrow \uparrow}\)
+           time of interest. Inserting these results in <a href="#equation7">equation 9</a> and neglecting \(\hat{\rho}_{\uparrow \uparrow}\)
            terms whose order is about \(1/\Gamma^2\) results in the desired equation
 		   $$\frac{\mathrm{d} \hat{\rho}_{\downarrow \downarrow}}{\mathrm{d} t}=\frac{4 \Omega^{2}}{\Gamma} \hat{K} \hat{\rho}_{\downarrow \downarrow} \hat{K}^{\dagger}-\frac{1}{2} \frac{4 \Omega^{2}}{\Gamma}\left\{\hat{K}^{\dagger} \hat{K}, \hat{\rho}_{\downarrow \downarrow}\right\}.\tag{17}$$
-		   This result is reminiscent of the non-unitary part of the Lindblad equation 7
+		   This result is reminiscent of the non-unitary part of the Lindblad <a href="#equation7">equation 7</a>
            with \(\hat{K}\) in the role of a new Lindblad operator \(\hat{L}'\) and the decay rate \(4\Omega^2/\Gamma\) 
 		   with \(\hat{L}'=\frac{2\Omega}{\sqrt{\Gamma}}\hat{K}\). As no unitary part exists, the steady state \(|\psi\rangle\) 
 		   of this process is simply given by \(\hat{K}|\psi\rangle=0\). (You may want to check yourself that by treating

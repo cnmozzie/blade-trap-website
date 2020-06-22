@@ -10,6 +10,8 @@
 	   (first published on 2020/05/26).</p>
 	<p>[005]<router-link to="/blade-trap/ions/lindblad_master_equation">Lindblad Master Equation</router-link> by <a href="mailto:gwx18@mails.tsinghua.edu.cn">Mozzie</a>
 	   (first published on 2020/05/30).</p>
+	<p>[006]<router-link to="/blade-trap/ions/measurement-based_quantum_computation_on_cluster_states">Measurement-based Quantum Computation on Cluster States</router-link> by <a href="mailto:gwx18@mails.tsinghua.edu.cn">Mozzie</a>
+	   (first published on 2020/06/12).</p>
 	<router-view></router-view>
   </div>
 </template>

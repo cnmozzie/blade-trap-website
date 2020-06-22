@@ -37,7 +37,7 @@
            2-photon scheme. We will illustrate the scheme employing \(^{171}\text{Yb}^+\) ions as a prototype.</p>
 	  </div>
 	  <div class="col-center-block">  
-        <embed src="remote_ions_entanglement/atomic-levels-and-setup.svg" width="600" height="600">
+        <embed src="remote_ions_entanglement/atomic-levels-and-setup.svg" width="600" height="600" id="fig1">
 	  </div>
       <div class="col-12">
         <figcaption class="figure-caption text-left"><strong>Figure 1: Involving atomic levels and the setup for ion-ion entanglement. 
@@ -64,9 +64,9 @@
 		   The qubit system collapse into \(|1\rangle\otimes|\psi_1\rangle\) with a probability \(|\beta|^2\) while \(|0\rangle\otimes|\psi_0\rangle\) otherwise.
 		    </p>
 		<p>To implement ion-ion entanglement, we consider a broad band π-polarized
-		   laser coupling both \(|0\rangle\) to \(|0'\rangle\) and \(|1\rangle\) to \(|1'\rangle\). (See Fig. 1(a)).
+		   laser coupling both \(|0\rangle\) to \(|0'\rangle\) and \(|1\rangle\) to \(|1'\rangle\). (See <a href="#fig1">Fig. 1(a)</a>).
 		   Starting from the same intial qubit state \(\alpha|0\rangle+\beta|1\rangle\), if the laser pulse is a π-pulse, the state will be
-           \(\alpha|0'\rangle+\beta|1'\rangle\). Then as shown in Fig. 1(b), a spontaneous emission results in a ion-photon
+           \(\alpha|0'\rangle+\beta|1'\rangle\). Then as shown in <a href="#fig1">Fig. 1(b)</a>, a spontaneous emission results in a ion-photon
            entanglement state \(\alpha|0\rangle|\nu_\text{blue}\rangle+\beta|1\rangle|\nu_\text{red}\rangle\). (Although there is probability for 
 		   \(|1'\rangle\) decaying into \(|^2S_{1/2},F=1,m_F=\pm1\rangle\) and emitting σ-polarized photons, we could always use a polarizing beam
            splitters (PBS) to eliminate this case.) The photon qubit is encoded by its frequency, denoting by
@@ -75,13 +75,14 @@
 		   so these type of photonic qubit is well-defined. If we consider another ion is initialized in the state 
            \(\gamma|0\rangle+\delta|1\rangle\), then due to the same argument, the ion-photon entanglement state will be 
            \(\gamma|0\rangle|\nu_\text{blue}\rangle+\delta|1\rangle|\nu_\text{red}\rangle\). Hence, the state of the two ion-photon systems is:
+		   <div class="anchor" id="eq1"></div>
 		   $$\begin{aligned}
            |\psi\rangle_{12} &=(\alpha|0\rangle_1|\nu_\text{blue}\rangle_1+\beta|1\rangle_1|\nu_\text{red}\rangle_1) \\
            &\otimes(\gamma|0\rangle_2|\nu_\text{blue}\rangle_2+\delta|1\rangle_2|\nu_\text{red}\rangle_2)
            \end{aligned}\tag{1}$$</p>
 	  </div>
 	  <div class="col-center-block">  
-        <embed src="remote_ions_entanglement/beam-splitter.svg" width="300" height="300">
+        <embed src="remote_ions_entanglement/beam-splitter.svg" width="300" height="300" id="fig2">
 	  </div>
       <div class="col-12">
         <figcaption class="figure-caption text-center"><strong>Figure 2:</strong> Two photon modes interfere on a beam splitter.</figcaption>
@@ -90,7 +91,7 @@
       <div class="col-12">
 		<p>The second step is photon-photon inteference which is most crucial in the generation of ion-ion
            entanglement. The two emitted photons are respectively collected into single mode fibers as shown
-           in Fig. 1(c) and then interfere on a beam splitter (BS), see Fig. 2. The effect of BS to the photon
+           in <a href="#fig1">Fig. 1(c)</a> and then interfere on a beam splitter (BS), see <a href="#fig2">Fig. 2</a>. The effect of BS to the photon
            annihilation (creation) operators from the two input ports, \(\hat{a}\) and \(\hat{b}\) is like a SU(2)-rotaion to them [15]:
 		   $$\begin{aligned}
            &\hat{a} \rightarrow \hat{a}^{\prime}=e^{i \theta J_{y}} \hat{a} e^{-i \theta J_{y}}=\hat{a} \cos \left(\frac{\theta}{2}\right)-\hat{b} \sin \left(\frac{\theta}{2}\right)\\
@@ -102,7 +103,7 @@
 		   while Mach-Zehnder interferometry is implemented by two beam-splitters with a free light path between them where each beam has a coherent free evolution respectively.
 		   In other words, Ramsey interferometry compares atom's coherence with microwave's and Mach-Zehnder interferometry compares photons' coherence of two different path.)</p>
 		<p>Next, we will show that the inteference on BS with detections after the two output
-           ports is equivalent to a Bell measurement, i.e. the apparatus in the dashed-line box in Fig. 1(c) is a
+           ports is equivalent to a Bell measurement, i.e. the apparatus in the dashed-line box in <a href="#fig1">Fig. 1(c)</a> is a
            Bell measurement device of linear optics [12, 16]. There are totally four photon operators \(\hat{a}_r\), \(\hat{a}_b\), \(\hat{b}_r\)
            and \(\hat{b}_b\) representing the red photon and blue photon of spatial mode "a" and "b".
            Only the same color will interfere with each other, hence we acquire the output mode operators with
@@ -119,23 +120,25 @@
            \left|\psi^{-}\right\rangle^{\prime} &=\frac{1}{\sqrt{2}}\left(a_{r}^{\prime \dagger} b_{b}^{\prime \dagger}-a_{b}^{\prime \dagger} b_{r}^{\prime \dagger}\right)|\text{vac}\rangle.
            \end{aligned}\tag{3}$$
 		   It's clearly that only the state \(|\psi^{-}\rangle'\) has a coincident click pattern on two detectors as shown in
-           Fig. 1b. The state of the total system after the respective ion-photon entanglement has the form of Eq. (1). 
+           <a href="#fig1">Fig. 1b</a>. The state of the total system after the respective ion-photon entanglement has the form of <a href="#eq1">Eq. (1)</a>. 
 		   This can be expanded in the Bell bases with setting \(\alpha=\beta=\gamma=\delta=1/\sqrt{2}\) [17]:
+		   <div class="anchor" id="eq4"></div>
 		   $$\begin{aligned}
            |\psi\rangle_{12} &=\frac{1}{2}(|0\rangle_1|\nu_\text{blue}\rangle_1+|1\rangle_1|\nu_\text{red}\rangle_1)\otimes(|0\rangle_2|\nu_\text{blue}\rangle_2+|1\rangle_2|\nu_\text{red}\rangle_2) \\
            &=\frac{1}{2}(|\phi^{+}\rangle_{\mathrm{ion}}|\phi^{+}\rangle_{\mathrm{ph}}+|\phi^{-}\rangle_{\mathrm{ion}}|\phi^{-}\rangle_{\mathrm{ph}}+|\psi^{+}\rangle_{\mathrm{ion}}|\psi^{+}\rangle_{\mathrm{ph}}+|\psi^{-}\rangle_{\mathrm{ion}}|\psi^{-}\rangle_{\mathrm{ph}})
            \end{aligned}\tag{4}$$
-		   Hence when coincident clicks on two photon detectors occurs, the state of Eq. (4) projects into
+		   Hence when coincident clicks on two photon detectors occurs, the state of <a href="#eq4">Eq. (4)</a> projects into
            \(|\psi^{-}\rangle_{\mathrm{ion}}|\psi^{-}\rangle_{\mathrm{ph}}\) 
 		   indicating an entangled state of two distant ions which can be regarded as entanglement
            swapping from two distinct atom-photon pairs to one atom-atom pair plus one photon-photon pair.</p>
 		<p>It may be more intuitive if we just use the origin basis instead of Bell basis.
-		   After a beam-splitter whose rotaion angle is \(\theta\), the state of Eq. (1) should become
+		   After a beam-splitter whose rotaion angle is \(\theta\), the state of <a href="#eq1">Eq. (1)</a> should become
+		   <div class="anchor" id="eq5"></div>
 		   $$\begin{aligned}
            |\psi\rangle_{12}^\prime &=\left[\alpha|0\rangle_1\left(|\nu_b\rangle_1\cos\frac{\theta}{2}-|\nu_b\rangle_2\sin\frac{\theta}{2}\right)+\beta|1\rangle_1\left(|\nu_r\rangle_1\cos\frac{\theta}{2}-|\nu_r\rangle_2\sin\frac{\theta}{2}\right)\right] \\
            &\otimes\left[\gamma|0\rangle_2\left(|\nu_b\rangle_1\sin\frac{\theta}{2}+|\nu_b\rangle_2\cos\frac{\theta}{2}\right)+\delta|1\rangle_2\left(|\nu_r\rangle_1\sin\frac{\theta}{2}+|\nu_r\rangle_2\cos\frac{\theta}{2}\right)\right].
            \end{aligned}\tag{5}$$
-		   A naive expanding of Eq. (5) will give 16 terms, but only terms with both spatial modes can be coincidentally detected by both detectors.
+		   A naive expanding of <a href="#eq5">Eq. (5)</a> will give 16 terms, but only terms with both spatial modes can be coincidentally detected by both detectors.
 		   Therefore, once we observed a coincident click pattern on two detectors, \(|\psi\rangle_{12}^\prime\) collapsed into
 		   $$\begin{aligned}
            |\psi\rangle_{12}^{\prime\prime} &=\alpha\gamma|0\rangle_1|0\rangle_2|\nu_b\rangle_1|\nu_b\rangle_2\left(\cos^2\frac{\theta}{2}-\sin^2\frac{\theta}{2}\right) \\
@@ -144,7 +147,7 @@
 		   &+\beta\delta|1\rangle_1||1\rangle_2|\nu_r\rangle_1|\nu_r\rangle_2\left(\cos^2\frac{\theta}{2}-\sin^2\frac{\theta}{2}\right).
            \end{aligned}\tag{6}$$
 		   For a 50/50 lossless BS, the rotation angle is π/2, thus
-		   $$|\psi\rangle_{12}^{\prime\prime}=(-\alpha \delta|0\rangle_{1}|1\rangle_{2}+\beta \gamma|1\rangle_{1}|0\rangle_{2})\left|\psi^{-}\right\rangle. \tag{7}$$</p>
+		   $$|\psi\rangle_{12}^{\prime\prime}=(-\alpha \delta|0\rangle_{1}|1\rangle_{2}+\beta \gamma|1\rangle_{1}|0\rangle_{2})\left|\psi^{-}\right\rangle_\text{ph}. \tag{7}$$</p>
 		<h3>Two-qubit gate mediated by photon</h3>
 		<p>Without setting \(\alpha=\beta=\gamma=\delta\), the coincident-click event is still equivalent to a heralded gate
            operation [18, 19]. As we shows above, the coincident clicks on two detectors amount to a projection \(_\mathrm{ph}\langle\psi^-|\):

@@ -2,7 +2,7 @@
   <div v-katex:auto class="container-fluid">
     <div class="row">
 	  <div class="col-12">
-	    <h1>Planar code</h1>
+	    <h1>Planar Code</h1>
         <p>Let us briefly recall the definition and the properties of the 
 		   <router-link to="/blade-trap/ions/toric_code">toric codes</router-link>.</p>
 		<p>In a toric code, qubits are associated with edges of an \(n \times n\) square lattice on the torus \(T^2\).
