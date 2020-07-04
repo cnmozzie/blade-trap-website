@@ -13,6 +13,7 @@ import VueLazyload from 'vue-lazyload'
 //import Timeline from './timeline.vue'
 const Timeline = () => import('./timeline.vue')
 const Chamber = () => import('./chamber.vue')
+const Optics = () => import('./optics.vue')
 const Ions = () => import('./ions.vue')
 const Chat = () => import('./chat.vue')
 const ToricCode = () => import('./ions/toric_code.vue')
@@ -54,6 +55,7 @@ Vue.use(Viewer)
 const routes = [
   { path: '/blade-trap', component: Timeline },
   { path: '/blade-trap/chamber', component: Chamber },
+  { path: '/blade-trap/optics', component: Optics },
   { path: '/blade-trap/ions', component: Ions,
       children: [
         {
