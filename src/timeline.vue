@@ -5,7 +5,87 @@
       <div>
         <section class="year">
           <h3>2020</h3>
+		  <section>
+            <h4>December</h4>
+            <dl>
+              <dt>16th</dt>
+              <dd>Succeed to brighten the Yb 171 ion using a 784nm laser.</dd>
+            </dl>
+			<dl>
+              <dt>11th</dt>
+              <dd>Succeed to brighten the Yb 174 ion using a 784nm laser.</dd>
+            </dl>
+			<dl>
+              <dt>4th</dt>
+              <dd>Succeed to darken the Yb 174 ion using a 435nm laser.</dd>
+            </dl>
+			<dl>
+              <dt>2nd</dt>
+              <dd>Succeed to darken the Yb 171 ion using a 435nm laser.</dd>
+            </dl>
+          </section>
+		  <section>
+            <h4>November</h4>
+            <dl>
+              <dt>19th</dt>
+              <dd>Succeed to darken the Yb 171 ion using a 708nm laser.</dd>
+            </dl>
+			<dl>
+              <dt>13th</dt>
+              <dd>Succeed to darken the Yb 171 ion using a 411nm laser.</dd>
+            </dl>
+          </section>
+		  <section>
+            <h4>October</h4>
+            <dl>
+              <dt>30th</dt>
+              <dd>Succeed to darken the Yb 174 ion using a 708nm laser.</dd>
+            </dl>
+			<dl>
+              <dt>23th</dt>
+              <dd>Succeed to darken the Yb 174 ion using a 411nm laser.</dd>
+            </dl>
+			<dl>
+              <dt>14th</dt>
+              <dd>Measured the coherence time of m=1 hyperfine level. 960us, a little long than many people expected.</dd>
+            </dl>
+			<dl>
+              <dt>8th</dt>
+              <dd>Measured the Zeeman split with a microwave. The magnetic field at the center of the trap is about 13.6 Gauss now.</dd>
+            </dl>
+          </section>
           <section>
+            <h4>September</h4>
+            <dl>
+              <dt>30th</dt>
+              <dd>Add a 356nm laser beam to the trap, can get back the ion from F7/2 state now.</dd>
+            </dl>
+			<dl>
+              <dt>21st</dt>
+              <dd>Used Doppler-recooling method to measure the heating rate. 42.05k/s for axial mode, like a surface trap!</dd>
+            </dl>
+          </section>
+		  <section>
+            <h4>August</h4>
+            <dl>
+              <dt>6th</dt>
+              <dd>Temporarily built a imaging system for the side window. Being able to tune the micromotion of the z axis.</dd>
+            </dl>
+          </section>
+		  <section>
+            <h4>July</h4>
+            <dl>
+              <dt>30th</dt>
+              <dd>System fully restored, Yb 171 reloaded.</dd>
+			  <dt>29th</dt>
+              <dd>System partially restored, Yb 174 reloaded.</dd>
+			  <dt>27th</dt>
+              <dd><span class="strong">Back to school, Finally...</span></dd>
+			  <dt>24th</dt>
+              <dd>Finish the visiting in Xueren's lab. Leaving Wuhan.</dd>
+            </dl>
+          </section>
+		  <section>
             <h4>June</h4>
             <dl>
               <dt>29th</dt>
@@ -59,7 +139,7 @@
 		    <h4>December</h4>
             <dl>
               <dt>30th</dt>
-              <dd><span class="strong">SAFE!! Succeed to load 171 ions.</span></dd>
+              <dd><span class="strong">SAFE!! Succeed to load Yb 171 ions.</span></dd>
               <dt>29th</dt>
               <dd>Add a second path for 370nm laser, ions seems stable with the protection beam.</dd>
 			  <dt>23rd</dt>

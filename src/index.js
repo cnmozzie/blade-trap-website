@@ -15,6 +15,7 @@ const Timeline = () => import('./timeline.vue')
 const Chamber = () => import('./chamber.vue')
 const Optics = () => import('./optics.vue')
 const Ions = () => import('./ions.vue')
+const Electronics = () => import('./electronics.vue')
 const Chat = () => import('./chat.vue')
 const ToricCode = () => import('./ions/toric_code.vue')
 const RemoteIonsEntanglement = () => import('./ions/remote_ions_entanglement.vue')
@@ -22,6 +23,10 @@ const PlanarCode = () => import('./ions/planar_code.vue')
 const MotionalStateEngineering = () => import('./ions/motional_state_engineering_with_trapped_ion.vue')
 const LindbladMasterEquation = () => import('./ions/lindblad_master_equation.vue')
 const QC_C = () => import('./ions/measurement-based_quantum_computation_on_cluster_states.vue')
+const EIITransition = () => import('./ions/electric_quadrupole_transitions.vue')
+const Guides = () => import('./electronics/guides.vue')
+const QTrap = () => import('./electronics/qtrap.vue')
+const DDS = () => import('./electronics/dds.vue')
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -83,6 +88,26 @@ const routes = [
 		{
           path: 'measurement-based_quantum_computation_on_cluster_states',
           component: QC_C
+        },
+		{
+          path: 'electric_quadrupole_transitions',
+          component: EIITransition
+        }
+      ]
+  },
+  { path: '/blade-trap/electronics', component: Electronics,
+      children: [
+        {
+          path: 'guides',
+          component: Guides
+        },
+		{
+          path: 'qtrap',
+          component: QTrap
+        },
+		{
+          path: 'dds',
+          component: DDS
         }
       ]
   },

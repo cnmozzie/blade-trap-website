@@ -12,6 +12,8 @@
 	   (first published on 2020/05/30).</p>
 	<p>[006]<router-link to="/blade-trap/ions/measurement-based_quantum_computation_on_cluster_states">Measurement-based Quantum Computation on Cluster States</router-link> by <a href="mailto:gwx18@mails.tsinghua.edu.cn">Mozzie</a>
 	   (first published on 2020/06/12).</p>
+	<p>[007]<router-link to="/blade-trap/ions/electric_quadrupole_transitions">Electric Quadrupole Transitions</router-link> by <a href="mailto:gwx18@mails.tsinghua.edu.cn">Mozzie</a>
+	   (first published on 2020/12/21).</p>
 	<router-view></router-view>
   </div>
 </template>
