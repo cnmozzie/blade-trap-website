@@ -217,8 +217,8 @@
 		<p>If we keep the notation of propagation directions of the wave and polarizations as the previous section, the coupling term is estimated to be
 		   \(|\boldsymbol{\epsilon} \cdot \mathbf{Q}_{02} \cdot \mathbf{n}|^2=73736a_0^4\cos^2\theta\sin^2\theta\cos^2\phi\), 
 		   where \(\theta\) is the angle between \(\mathbf{n}\) and \(\mathbf{B}\), \(\phi\) is the angle between \((\mathbf{n},\mathbf{B})\)-plane and \(\boldsymbol{\epsilon}\).</p>
-		<p>For a 400uW light power's 435nm laser beam with 80um diameter beam size, it's rabi rate can reach to near \(2\pi\times0.517\text{ kHz}\),
-		   corresponding to a 967 us \(\pi\)-time.</p>
+		<p>For a 400uW light power's 435nm laser beam with 80um diameter beam size, it's rabi rate can reach to near \(2\pi\times 517\text{ kHz}\),
+		   corresponding to about 1 us \(\pi\)-time.</p>
 		
 		<h3>External links</h3>
 		<ul>
