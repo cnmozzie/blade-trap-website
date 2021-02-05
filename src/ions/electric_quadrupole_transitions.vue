@@ -3,8 +3,18 @@
     <div class="row">
 	  <div class="col-12">
 	    <h1>Electric Quadrupole Transitions</h1>
-        <p>This article introduces the theory about electric quadrupole transitions, 
-		   providing some examples for calculating the rabi rate of \(^{171}Yb^+\) ion's transitions.</p>
+        <p>When we talk about the light-atom interaction, we need a quantity to describe whether the coupling is strong or week.
+		   For a two level system, such quantity is Rabi frequency, which can be measured precisely in experiment.
+		   Before doing an experiment, one might want to calculate it first.
+		   If we treat the laser as a locally uniform electromagnetic field, it can be write as a harmonic time-dependent operator.
+		   Then the evolution of the two level system can be quickly solvedunder the interaction picture. 
+		   However, the magnitude of the operator is not only dependent on the light intensity, but also the coupling strength between two states.
+		   For complex atoms, it's very hard to calculate the coupling strength. 
+		   Luckily, if we know the life time of the upper level, we can use the perturbation theory the extract the information the coupling strength,
+		   thus we can calculate the Rabi frequency given the frequency, polarization and intensity information of the laser.</p>
+		<p>This article will start from the interaction picture, shows the connection between of the level lifetime and Rabi frequency,
+		   introduces the theory about electric dipole and quadrupole transitions, and lastly
+		   provides some examples for calculating the rabi rate of \(^{171}Yb^+\) ion's transitions.</p>
         <h3>The interaction picture</h3>
 		<p>Given the Schrödinger picture time-dependent Hamiltonian \(\hat{H}_{S}(t)=\hat{H}_{0}+\hat{V}_{S}(t)\),
 		   where \(\hat{H}_{0}\) is independent of time t, The time evolution 
